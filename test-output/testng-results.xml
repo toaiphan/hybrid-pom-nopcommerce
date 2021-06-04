@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="25967" started-at="2021-06-04T03:50:44Z" finished-at="2021-06-04T03:51:10Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="25967" started-at="2021-06-04T03:50:44Z" finished-at="2021-06-04T03:51:10Z">
+      <class name="com.nopcommerce.users.Level_01_Register_Login">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@68be2bc2]" name="beforeClass" is-config="true" duration-ms="13550" started-at="2021-06-04T03:50:44Z" finished-at="2021-06-04T03:50:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="TC_01_Register()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@68be2bc2]" name="TC_01_Register" duration-ms="6560" started-at="2021-06-04T03:50:57Z" finished-at="2021-06-04T03:51:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_01_Register -->
+        <test-method status="PASS" signature="TC_02_Login()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@68be2bc2]" name="TC_02_Login" duration-ms="2951" started-at="2021-06-04T03:51:04Z" finished-at="2021-06-04T03:51:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_02_Login -->
+        <test-method status="PASS" signature="TC_03_View_My_Account()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@68be2bc2]" name="TC_03_View_My_Account" duration-ms="1309" started-at="2021-06-04T03:51:07Z" finished-at="2021-06-04T03:51:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_03_View_My_Account -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@68be2bc2]" name="afterClass" is-config="true" duration-ms="1558" started-at="2021-06-04T03:51:08Z" finished-at="2021-06-04T03:51:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.nopcommerce.users.Level_01_Register_Login -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
