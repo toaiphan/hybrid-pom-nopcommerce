@@ -1,6 +1,9 @@
 package com.nopcommerce.users;
 
 import org.testng.annotations.Test;
+
+import commons.AbstractPage;
+
 import org.testng.annotations.BeforeClass;
 
 import java.util.Random;
@@ -26,6 +29,8 @@ public class Level_01_Register_Login {
 
 	// Khai bao firstname,lastname,email,companyName,password;
 	String firstname, lastname, email, companyName, password;
+	
+	AbstractPage abstractPage;
 
 	@BeforeClass
 	public void beforeClass() {
@@ -37,10 +42,19 @@ public class Level_01_Register_Login {
 
 		// khoi tao implicit wait 30s
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		//khoi tao abtractPage
+		 abstractPage = new AbstractPage();
 
 		// mo trang demo.nopcommerce.com
-		driver.get("https://demo.nopcommerce.com/");
-
+		//driver.get("https://demo.nopcommerce.com/");
+		
+		//mo URl su dung ham common 
+		abstractPage.openPageUrl(driver, "https://demo.nopcommerce.com/");
+		
+		//get URL 
+		String pageURL = abstractPage.getCurrentPageUrl(driver);
+		System.out.println(pageURL);
+		
 		// tao bo du lieu (email se +4 so random)
 		firstname = "phan";
 		lastname = "toai";
@@ -98,7 +112,7 @@ public class Level_01_Register_Login {
 
 	}
 
-	@Test
+	//@Test
 	public void TC_02_Login() {
 
 		// click login
@@ -116,7 +130,7 @@ public class Level_01_Register_Login {
 
 	}
 
-	@Test
+	//@Test
 	public void TC_03_View_My_Account() {
 
 		// click vao my account
