@@ -3,6 +3,11 @@ package com.nopcommerce.users;
 import org.testng.annotations.Test;
 
 import commons.AbstractPage;
+import pageObjects.CustomerInforPageObject;
+import pageObjects.HomePageObject;
+import pageObjects.LoginPageObject;
+import pageObjects.RegisterPageObject;
+import pageUIs.HomePageUI;
 
 import org.testng.annotations.BeforeClass;
 
@@ -166,4 +171,8 @@ public class Level_01_Register_Login {
 
 	}
 
+	HomePageObject homePage;
+	LoginPageObject loginPage;
+	CustomerInforPageObject customerInfoPage;
+	RegisterPageObject registerPage;
 }
