@@ -23,4 +23,28 @@ public class HomePageObject extends AbstractPage {
 		clickToElement(driver, HomePageUI.REGISTER_LINK);
 	}
 
+	public void clickToLoginLink() {
+		waitToElementClickable(driver, HomePageUI.LOGIN_LINK);
+		clickToElement(driver, HomePageUI.LOGIN_LINK);
+
+	}
+
+	public boolean isMyAccountLinkDisplayed() {
+		waitToElementVisible(driver, HomePageUI.MY_ACCOUNT_LINK);
+		return isElementDisplayed(driver, HomePageUI.MY_ACCOUNT_LINK);
+	}
+
+	public boolean isLogoutLinkDisplayed() {
+		waitToElementVisible(driver, HomePageUI.LOGOUT_LINK);
+		return isElementDisplayed(driver, HomePageUI.LOGOUT_LINK);
+
+	}
+
+	public void clickToMyAccountLink() {
+		// TODO Auto-generated method stub
+		waitToElementClickable(driver, HomePageUI.MY_ACCOUNT_LINK);
+		clickToElement(driver, HomePageUI.MY_ACCOUNT_LINK);
+		
+	}
+
 }

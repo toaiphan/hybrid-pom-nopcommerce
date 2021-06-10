@@ -7,14 +7,9 @@ import pageObjects.CustomerInforPageObject;
 import pageObjects.HomePageObject;
 import pageObjects.LoginPageObject;
 import pageObjects.RegisterPageObject;
-import pageUIs.HomePageUI;
-
 import org.testng.annotations.BeforeClass;
-
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
@@ -78,13 +73,32 @@ public class Level_01_Register_Login extends AbstractPage {
 
 	}
 
-	// @Test
+	@Test
 	public void TC_02_Login() {
-
+		homePage.clickToLoginLink();
+		loginPage = new LoginPageObject(driver);
+		loginPage.inputToEmailTextbox(email);
+		loginPage.inputToPasswordTextbox(password);
+		loginPage.clickToLoginButton();
+		homePage = new HomePageObject(driver);
+		Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
+		Assert.assertTrue(homePage.isLogoutLinkDisplayed());
 	}
 
-	// @Test
+	@Test
 	public void TC_03_View_My_Account() {
+		homePage.clickToMyAccountLink();
+		customerInfoPage = new CustomerInforPageObject(driver);
+		Assert.assertTrue(customerInfoPage.isGenderMaleRadioButtonSelected());
+		Assert.assertEquals(customerInfoPage.getFirstNameTextboxValue(), firstname);
+		Assert.assertEquals(customerInfoPage.getLastNameTextboxValue(), lastname);
+		Assert.assertEquals(customerInfoPage.getSelectedTextInDayDropdown(), "10");
+		Assert.assertEquals(customerInfoPage.getSelectedTextInMonthDropdown(), "August");
+		Assert.assertEquals(customerInfoPage.getSelectedTextInYearDropdown(), "1995");
+		Assert.assertEquals(customerInfoPage.getEmailTextboxValue(), email);
+		Assert.assertEquals(customerInfoPage.getCompanyTextboxValue(), companyName);
+		Assert.assertTrue(customerInfoPage.isNewLeterCheckboxSelected());
+
 
 	}
 
