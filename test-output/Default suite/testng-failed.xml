@@ -6,7 +6,9 @@
       <class name="com.nopcommerce.users.Level_01_Register_Login">
         <methods>
           <include name="TC_01_Register"/>
+          <include name="TC_02_Login"/>
           <include name="afterClass"/>
+          <include name="TC_03_View_My_Account"/>
           <include name="beforeClass"/>
         </methods>
       </class> <!-- com.nopcommerce.users.Level_01_Register_Login -->

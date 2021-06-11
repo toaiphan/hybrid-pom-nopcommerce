@@ -178,6 +178,12 @@ public class AbstractPage {
 	public void sendKeyToElement(WebDriver driver, String locator, String value) {
 		element = getElement(driver, locator);
 		element.clear();
+		
+		// do chrome va edge hay co loi khi clear xong ma sendkeys nhanh qua , nen can wait 500 milisecond
+		if (driver.toString().toLowerCase().contains("chrome") || driver.toString().toLowerCase().contains("edge")) {
+			sleepInMiliSecond(500);
+
+		}
 		element.sendKeys(value);
 
 	}
@@ -241,6 +247,15 @@ public class AbstractPage {
 	public void sleepInSecond(long timeout) {
 		try {
 			Thread.sleep(timeout * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	public void sleepInMiliSecond(long timeout) {
+		try {
+			Thread.sleep(timeout);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
