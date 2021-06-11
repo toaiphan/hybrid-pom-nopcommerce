@@ -15,8 +15,15 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
-
+//
+//--------------------------------Các bước viết script dạng Page Object Pattern-----------------------------//
+//1. Tạo các pageObject class ( chưa viết gì)
+//2. Tạo các pageUI Class ( viết các locator trong đó)
+//3. Viết các hàm giả trong testcase
+//4. Từ các hàm giả tạo hàm và viết các hàm trong pageObject class (TDD Test-Driven-Development )
 //DRY : Dont repeat yourself : lap lai nhieu se mat nhieu thoi gian maintain
+
+//--------------------fake data:mockaroo.com--------------------------//
 public class Level_01_Register_Login extends AbstractPage {
 	// Khai bao projectFolder
 	String projectFolder = System.getProperty("user.dir");
