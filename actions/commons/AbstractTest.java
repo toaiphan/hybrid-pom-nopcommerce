@@ -10,6 +10,8 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class AbstractTest {
 
 	private WebDriver driver;
@@ -17,36 +19,50 @@ public class AbstractTest {
 	private String osName = System.getProperty("os.name");
 
 	protected WebDriver getBrowserDriver(String browserName) {
-		setBrowserDriver();
-		if (browserName.equals("firefox_ui")) {
+		// C1 de chay multi os
+		// setBrowserDriver();
+		// C2 :Dung WebDriverManager (
+		Browser browser = Browser.valueOf(browserName.toUpperCase());
+				
+
+		if (browser == Browser.FIREFOX_UI) {
 			// set geko driver
+
+			// WebDriverManager ( thu vien cua JAva): tu dong tai driver , tu dong set
+			// WebDriverManager.firefoxdriver().driverVersion("xxxxx").setup();( setup version, neu khong se tu tai ver moi nhat)
+// hoac browserVersion("xxxxx")
+			// Property
+			WebDriverManager.firefoxdriver().setup();
 
 			// khoi tao driver
 			driver = new FirefoxDriver();
 
-		} else if (browserName.equals("chrome_ui")) {
+		} else if (browser == Browser.CHROME_UI) {
 			// set geko driver
-
+			WebDriverManager.chromedriver().setup();
 			// khoi tao driver
 			driver = new ChromeDriver();
 
-		} else if (browserName.equals("firefox_headless")) {
+		} else if (browser == Browser.FIREFOX_HEADLESS) {
 			// set geko driver
+			WebDriverManager.firefoxdriver().setup();
 
 			FirefoxOptions options = new FirefoxOptions();
 			options.setHeadless(true);
 			driver = new FirefoxDriver(options);
 
-		} else if (browserName.equals("chrome_headless")) {
+		} else if (browser == Browser.CHROME_HEADLESS) {
 			// set geko driver
+			WebDriverManager.chromedriver().setup();
 
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("headless");
 			options.addArguments("windown-size=1920x1080");
 			driver = new ChromeDriver(options);
 
-		} else if (browserName.equals("edge_chromium")) {
+		} else if (browser == Browser.EDGE_CHROMIUM) {
 			// set geko driver
+			WebDriverManager.edgedriver().setup();
 
 			// khoi tao driver
 			driver = new EdgeDriver();
@@ -64,7 +80,6 @@ public class AbstractTest {
 		return driver;
 	}
 
-	
 ///multi OS ------------------------------ CACH 1--------------------------------
 	private void setBrowserDriver() {
 		if (isWindows()) {
@@ -74,9 +89,9 @@ public class AbstractTest {
 					projectFolder + getDirectorySlash("browserDriver") + "geckodriver.exe");
 			System.setProperty("webdriver.edge.driver",
 					projectFolder + getDirectorySlash("browserDriver") + "msedgedriver.exe");
-		
-		} else if (isMac()) {
 
+		} else if (isMac()) {
+//tren MAC can phai set permistion
 			System.setProperty("webdriver.chrome.driver",
 					projectFolder + getDirectorySlash("browserDriver") + "chromedriver.mac");
 			System.setProperty("webdriver.gecko.driver",
@@ -94,12 +109,16 @@ public class AbstractTest {
 	}
 //-----------------------------------Multi OS CACH 2----------------------------//
 //WebDriverManager ( thu vien cua JAva): tu dong tai driver , tu dong set Property
+	// https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
+	// tai version moi + tat ca Compile Dependencies
+	// copy vao libWebDriverManager = >Add to build path tat ca file
+
 	protected int getRandomNumber() {
 		Random rand = new Random();
 		return rand.nextInt(999999);
 
 	}
-	
+
 	private String getDirectorySlash(String folderName) {
 		if (isMac() || isUnix() || isSolaris()) {
 			folderName = "/" + folderName + "/";

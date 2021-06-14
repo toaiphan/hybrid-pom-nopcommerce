@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="15" passed="15">
+  <reporter-output>
+  </reporter-output>
+  <suite name="NopCommerce" duration-ms="322775" started-at="2021-06-14T09:52:09Z" finished-at="2021-06-14T09:57:32Z">
+    <groups>
+    </groups>
+    <test name="Run on FIREFOX UI" duration-ms="91646" started-at="2021-06-14T09:52:09Z" finished-at="2021-06-14T09:53:40Z">
+      <class name="com.nopcommerce.users.Level_01_Register_Login">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@8bd1b6a]" name="beforeClass" is-config="true" duration-ms="61228" started-at="2021-06-14T09:52:09Z" finished-at="2021-06-14T09:53:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox_ui]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="TC_01_Register()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@8bd1b6a]" name="TC_01_Register" duration-ms="14529" started-at="2021-06-14T09:53:10Z" finished-at="2021-06-14T09:53:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_01_Register -->
+        <test-method status="PASS" signature="TC_02_Login()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@8bd1b6a]" name="TC_02_Login" duration-ms="8170" started-at="2021-06-14T09:53:25Z" finished-at="2021-06-14T09:53:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_02_Login -->
+        <test-method status="PASS" signature="TC_03_View_My_Account()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@8bd1b6a]" name="TC_03_View_My_Account" duration-ms="3867" started-at="2021-06-14T09:53:33Z" finished-at="2021-06-14T09:53:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_03_View_My_Account -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@8bd1b6a]" name="afterClass" is-config="true" duration-ms="3229" started-at="2021-06-14T09:53:37Z" finished-at="2021-06-14T09:53:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.nopcommerce.users.Level_01_Register_Login -->
+    </test> <!-- Run on FIREFOX UI -->
+    <test name="Run on CHROME UI" duration-ms="62018" started-at="2021-06-14T09:53:41Z" finished-at="2021-06-14T09:54:43Z">
+      <class name="com.nopcommerce.users.Level_01_Register_Login">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@685cb137]" name="beforeClass" is-config="true" duration-ms="35265" started-at="2021-06-14T09:53:41Z" finished-at="2021-06-14T09:54:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome_ui]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="TC_01_Register()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@685cb137]" name="TC_01_Register" duration-ms="14898" started-at="2021-06-14T09:54:16Z" finished-at="2021-06-14T09:54:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_01_Register -->
+        <test-method status="PASS" signature="TC_02_Login()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@685cb137]" name="TC_02_Login" duration-ms="6284" started-at="2021-06-14T09:54:31Z" finished-at="2021-06-14T09:54:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_02_Login -->
+        <test-method status="PASS" signature="TC_03_View_My_Account()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@685cb137]" name="TC_03_View_My_Account" duration-ms="4576" started-at="2021-06-14T09:54:38Z" finished-at="2021-06-14T09:54:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_03_View_My_Account -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@685cb137]" name="afterClass" is-config="true" duration-ms="930" started-at="2021-06-14T09:54:42Z" finished-at="2021-06-14T09:54:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.nopcommerce.users.Level_01_Register_Login -->
+    </test> <!-- Run on CHROME UI -->
+    <test name="Run on FIREFOX HEADLESS" duration-ms="33620" started-at="2021-06-14T09:54:43Z" finished-at="2021-06-14T09:55:17Z">
+      <class name="com.nopcommerce.users.Level_01_Register_Login">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@7d9d1a19]" name="beforeClass" is-config="true" duration-ms="10416" started-at="2021-06-14T09:54:43Z" finished-at="2021-06-14T09:54:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox_headless]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="TC_01_Register()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@7d9d1a19]" name="TC_01_Register" duration-ms="9222" started-at="2021-06-14T09:54:54Z" finished-at="2021-06-14T09:55:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_01_Register -->
+        <test-method status="PASS" signature="TC_02_Login()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@7d9d1a19]" name="TC_02_Login" duration-ms="5630" started-at="2021-06-14T09:55:03Z" finished-at="2021-06-14T09:55:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_02_Login -->
+        <test-method status="PASS" signature="TC_03_View_My_Account()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@7d9d1a19]" name="TC_03_View_My_Account" duration-ms="4013" started-at="2021-06-14T09:55:08Z" finished-at="2021-06-14T09:55:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_03_View_My_Account -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@7d9d1a19]" name="afterClass" is-config="true" duration-ms="4325" started-at="2021-06-14T09:55:12Z" finished-at="2021-06-14T09:55:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.nopcommerce.users.Level_01_Register_Login -->
+    </test> <!-- Run on FIREFOX HEADLESS -->
+    <test name="Run on CHROME HEADLESS" duration-ms="35469" started-at="2021-06-14T09:55:17Z" finished-at="2021-06-14T09:55:52Z">
+      <class name="com.nopcommerce.users.Level_01_Register_Login">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@5442a311]" name="beforeClass" is-config="true" duration-ms="10230" started-at="2021-06-14T09:55:17Z" finished-at="2021-06-14T09:55:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome_headless]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="TC_01_Register()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@5442a311]" name="TC_01_Register" duration-ms="14245" started-at="2021-06-14T09:55:27Z" finished-at="2021-06-14T09:55:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_01_Register -->
+        <test-method status="PASS" signature="TC_02_Login()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@5442a311]" name="TC_02_Login" duration-ms="6172" started-at="2021-06-14T09:55:41Z" finished-at="2021-06-14T09:55:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_02_Login -->
+        <test-method status="PASS" signature="TC_03_View_My_Account()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@5442a311]" name="TC_03_View_My_Account" duration-ms="4122" started-at="2021-06-14T09:55:47Z" finished-at="2021-06-14T09:55:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_03_View_My_Account -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@5442a311]" name="afterClass" is-config="true" duration-ms="689" started-at="2021-06-14T09:55:52Z" finished-at="2021-06-14T09:55:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.nopcommerce.users.Level_01_Register_Login -->
+    </test> <!-- Run on CHROME HEADLESS -->
+    <test name="Run on EDGE CHROMIUM" duration-ms="99277" started-at="2021-06-14T09:55:52Z" finished-at="2021-06-14T09:57:32Z">
+      <class name="com.nopcommerce.users.Level_01_Register_Login">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@754ba872]" name="beforeClass" is-config="true" duration-ms="64640" started-at="2021-06-14T09:55:52Z" finished-at="2021-06-14T09:56:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge_chromium]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="TC_01_Register()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@754ba872]" name="TC_01_Register" duration-ms="21214" started-at="2021-06-14T09:56:57Z" finished-at="2021-06-14T09:57:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_01_Register -->
+        <test-method status="PASS" signature="TC_02_Login()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@754ba872]" name="TC_02_Login" duration-ms="6635" started-at="2021-06-14T09:57:18Z" finished-at="2021-06-14T09:57:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_02_Login -->
+        <test-method status="PASS" signature="TC_03_View_My_Account()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@754ba872]" name="TC_03_View_My_Account" duration-ms="5289" started-at="2021-06-14T09:57:25Z" finished-at="2021-06-14T09:57:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_03_View_My_Account -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@754ba872]" name="afterClass" is-config="true" duration-ms="1478" started-at="2021-06-14T09:57:30Z" finished-at="2021-06-14T09:57:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.nopcommerce.users.Level_01_Register_Login -->
+    </test> <!-- Run on EDGE CHROMIUM -->
+  </suite> <!-- NopCommerce -->
+</testng-results>
