@@ -7,6 +7,7 @@ import commons.AbstractTest;
 import pageObjects.CustomerInforPageObject;
 import pageObjects.HomePageObject;
 import pageObjects.LoginPageObject;
+import pageObjects.PageGeneratorManager;
 import pageObjects.RegisterPageObject;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -68,9 +69,9 @@ public class Level_01_Register_Login extends AbstractTest {
 	@Test
 	public void TC_01_Register() {
 
-		homePage = new HomePageObject(driver);
-		homePage.clickToRegisterLink();
-		registerPage = new RegisterPageObject(driver);
+		homePage = PageGeneratorManager.getHomePage(driver);
+		//switch page( dam bao tinh dong goi, cac page co su lien ket voi nhau)
+		registerPage = homePage.clickToRegisterLink();
 		registerPage.clickToGenderMaleRadioButton();
 		registerPage.inputToFirstNameTextbox(firstname);
 		registerPage.inputToLastNameTextbox(lastname);
@@ -83,27 +84,23 @@ public class Level_01_Register_Login extends AbstractTest {
 		registerPage.inputToConfirmPasswordTextbox(password);
 		registerPage.clickToRegisterButton();
 		Assert.assertEquals(registerPage.getRegisteredSuccessMessage(), "Your registration completed");
-		registerPage.clickToLogoutLink();
-		homePage = new HomePageObject(driver);
-
+		homePage = registerPage.clickToLogoutLink();
+	
 	}
 
 	@Test
 	public void TC_02_Login() {
-		homePage.clickToLoginLink();
-		loginPage = new LoginPageObject(driver);
+		loginPage = homePage.clickToLoginLink();
 		loginPage.inputToEmailTextbox(email);
 		loginPage.inputToPasswordTextbox(password);
-		loginPage.clickToLoginButton();
-		homePage = new HomePageObject(driver);
+		homePage = loginPage.clickToLoginButton();
 		Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
 		Assert.assertTrue(homePage.isLogoutLinkDisplayed());
 	}
 
 	@Test
 	public void TC_03_View_My_Account() {
-		homePage.clickToMyAccountLink();
-		customerInfoPage = new CustomerInforPageObject(driver);
+		customerInfoPage = homePage.clickToMyAccountLink();
 		Assert.assertTrue(customerInfoPage.isGenderMaleRadioButtonSelected());
 		Assert.assertEquals(customerInfoPage.getFirstNameTextboxValue(), firstname);
 		Assert.assertEquals(customerInfoPage.getLastNameTextboxValue(), lastname);
