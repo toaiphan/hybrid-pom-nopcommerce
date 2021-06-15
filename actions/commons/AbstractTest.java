@@ -72,8 +72,8 @@ public class AbstractTest {
 			throw new RuntimeException("Please input valid browser name value");
 		}
 
-		// khoi tao implicit wait 30s
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		// khoi tao implicit wait GlobalConstants.LONG_TIMEOUTs
+		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.get("https://demo.nopcommerce.com/");
 

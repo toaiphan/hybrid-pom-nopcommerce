@@ -24,6 +24,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import pageObjects.PageGeneratorManager;
+import pageUIs.AbstractPageUI;
+
 //trong nay se viet tat cac cac ham common, de su dung lai
 public class AbstractPage {
 
@@ -92,7 +95,7 @@ public class AbstractPage {
 
 	// waitAlertPresence
 	public void waitAlertPresence(WebDriver driver) {
-		explicitWait = new WebDriverWait(driver, 30);
+		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
 		explicitWait.until(ExpectedConditions.alertIsPresent());
 	}
 
@@ -169,8 +172,20 @@ public class AbstractPage {
 
 	}
 
+	public String getDynamicLocator(String locator, String... values) {
+		locator = String.format(locator, (Object[]) values);
+		return locator;
+
+	}
+
 	public void clickToElement(WebDriver driver, String locator) {
 		element = getElement(driver, locator);
+		element.click();
+
+	}
+
+	public void clickToElement(WebDriver driver, String locator, String... values) {
+		element = getElement(driver, getDynamicLocator(locator, values));
 		element.click();
 
 	}
@@ -178,8 +193,23 @@ public class AbstractPage {
 	public void sendKeyToElement(WebDriver driver, String locator, String value) {
 		element = getElement(driver, locator);
 		element.clear();
-		
-		// do chrome va edge hay co loi khi clear xong ma sendkeys nhanh qua , nen can wait 500 milisecond
+
+		// do chrome va edge hay co loi khi clear xong ma sendkeys nhanh qua , nen can
+		// wait 500 milisecond
+		if (driver.toString().toLowerCase().contains("chrome") || driver.toString().toLowerCase().contains("edge")) {
+			sleepInMiliSecond(500);
+
+		}
+		element.sendKeys(value);
+
+	}
+
+	public void sendKeyToElement(WebDriver driver, String locator, String value, String... values) {
+		element = getElement(driver, getDynamicLocator(locator, values));
+		element.clear();
+
+		// do chrome va edge hay co loi khi clear xong ma sendkeys nhanh qua , nen can
+		// wait 500 milisecond
 		if (driver.toString().toLowerCase().contains("chrome") || driver.toString().toLowerCase().contains("edge")) {
 			sleepInMiliSecond(500);
 
@@ -218,7 +248,7 @@ public class AbstractPage {
 		sleepInSecond(1);
 
 		// 2. cho cho tat ca cac item co trong HTML DOM( ko can visible)
-		explicitWait = new WebDriverWait(driver, 30);
+		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
 		explicitWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(getByXpath(childItemLocator)));
 		// 3. lay het tat ca cac item nay dua vao 1 list element
 		List<WebElement> allItems = getElements(driver, childItemLocator);
@@ -296,6 +326,11 @@ public class AbstractPage {
 
 	public boolean isElementDisplayed(WebDriver driver, String locator) {
 		return getElement(driver, locator).isDisplayed();
+
+	}
+
+	public boolean isElementDisplayed(WebDriver driver, String locator, String... values) {
+		return getElement(driver, getDynamicLocator(locator, values)).isDisplayed();
 
 	}
 
@@ -463,19 +498,59 @@ public class AbstractPage {
 	// wait
 
 	public void waitToElementVisible(WebDriver driver, String locator) {
-		explicitWait = new WebDriverWait(driver, 30);
+		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
 		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(getByXpath(locator)));
 	}
 
+	public void waitToElementVisible(WebDriver driver, String locator, String... values) {
+		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
+		explicitWait
+				.until(ExpectedConditions.visibilityOfElementLocated(getByXpath(getDynamicLocator(locator, values))));
+	}
+
 	public void waitToElementInvisible(WebDriver driver, String locator) {
-		explicitWait = new WebDriverWait(driver, 30);
+		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
 		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(locator)));
 	}
 
+	public void waitToElementInvisible(WebDriver driver, String locator, String... values) {
+		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
+		explicitWait
+				.until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(getDynamicLocator(locator, values))));
+	}
+
 	public void waitToElementClickable(WebDriver driver, String locator) {
-		explicitWait = new WebDriverWait(driver, 30);
+		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(locator)));
 
+	}
+
+	public void waitToElementClickable(WebDriver driver, String locator, String... values) {
+		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
+		explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(getDynamicLocator(locator, values))));
+
+	}
+// neu 10-15 page thi co the lam cach nay
+	public AbstractPage openLinkByPageName(WebDriver driver, String pageName) {
+		waitToElementClickable(driver, AbstractPageUI.DYNAMIC_LINK, pageName);
+		clickToElement(driver, AbstractPageUI.DYNAMIC_LINK, pageName);
+		switch (pageName) {
+		case "Addresses":
+			return PageGeneratorManager.getAddressesPage(driver);
+		case "My Product Reviews":
+			return PageGeneratorManager.getMyProductReviewPage(driver);
+		case "Customer info":
+			return PageGeneratorManager.getCustomerInfoPage(driver);
+		default:
+			return PageGeneratorManager.getOdersPage(driver);
+
+		}
+	}
+//neu nhieu page qua thi dung cach nay
+	public void openLinkWithPageName(WebDriver driver, String pageName) {
+		waitToElementClickable(driver, AbstractPageUI.DYNAMIC_LINK, pageName);
+		clickToElement(driver, AbstractPageUI.DYNAMIC_LINK, pageName);
+		
 	}
 
 	private WebDriverWait explicitWait;

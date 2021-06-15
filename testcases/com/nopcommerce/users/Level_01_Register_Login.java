@@ -4,9 +4,12 @@ import org.testng.annotations.Test;
 
 import commons.AbstractPage;
 import commons.AbstractTest;
+import pageObjects.AddressPageObject;
 import pageObjects.CustomerInforPageObject;
 import pageObjects.HomePageObject;
 import pageObjects.LoginPageObject;
+import pageObjects.MyProductReviewPageObject;
+import pageObjects.OdersPagePageObject;
 import pageObjects.PageGeneratorManager;
 import pageObjects.RegisterPageObject;
 import org.testng.annotations.BeforeClass;
@@ -57,7 +60,6 @@ public class Level_01_Register_Login extends AbstractTest {
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName);
 
-
 		// tao bo du lieu (email se +4 so random)
 		firstname = "phan";
 		lastname = "toai";
@@ -70,7 +72,7 @@ public class Level_01_Register_Login extends AbstractTest {
 	public void TC_01_Register() {
 
 		homePage = PageGeneratorManager.getHomePage(driver);
-		//switch page( dam bao tinh dong goi, cac page co su lien ket voi nhau)
+		// switch page( dam bao tinh dong goi, cac page co su lien ket voi nhau)
 		registerPage = homePage.clickToRegisterLink();
 		registerPage.clickToGenderMaleRadioButton();
 		registerPage.inputToFirstNameTextbox(firstname);
@@ -85,7 +87,7 @@ public class Level_01_Register_Login extends AbstractTest {
 		registerPage.clickToRegisterButton();
 		Assert.assertEquals(registerPage.getRegisteredSuccessMessage(), "Your registration completed");
 		homePage = registerPage.clickToLogoutLink();
-	
+
 	}
 
 	@Test
@@ -113,9 +115,23 @@ public class Level_01_Register_Login extends AbstractTest {
 
 	}
 
-	// viet ham random cho email getRandomNumber
+//	@Test
+//	public void TC_04_Switch_Page_Solution_1() {
+//		addressPage = (AddressPageObject) customerInfoPage.openLinkByPageName(driver, "Addresses");
+//		customerInfoPage = (CustomerInforPageObject) addressPage.openLinkByPageName(driver, "Customer info");
+//		myProductReviewPage = (MyProductReviewPageObject) customerInfoPage.openLinkByPageName(driver,
+//				"My product reviews");
+//	}
 
-	
+	@Test
+	public void TC_04_Switch_Page_Solution_2() {
+		customerInfoPage.openLinkByPageName(driver, "Addresses");
+		addressPage = PageGeneratorManager.getAddressesPage(driver);
+		addressPage.openLinkByPageName(driver, "Customer info");
+		customerInfoPage = PageGeneratorManager.getCustomerInfoPage(driver);
+		customerInfoPage.openLinkByPageName(driver, "My product reviews");
+		myProductReviewPage = PageGeneratorManager.getMyProductReviewPage(driver);
+	}
 
 	@AfterClass
 	public void afterClass() {
@@ -128,4 +144,7 @@ public class Level_01_Register_Login extends AbstractTest {
 	LoginPageObject loginPage;
 	CustomerInforPageObject customerInfoPage;
 	RegisterPageObject registerPage;
+	AddressPageObject addressPage;
+	MyProductReviewPageObject myProductReviewPage;
+	OdersPagePageObject odersPagePage;
 }
