@@ -4,14 +4,14 @@ import org.testng.annotations.Test;
 
 import commons.AbstractPage;
 import commons.AbstractTest;
-import pageObjects.AddressPageObject;
-import pageObjects.CustomerInforPageObject;
-import pageObjects.HomePageObject;
-import pageObjects.LoginPageObject;
-import pageObjects.MyProductReviewPageObject;
-import pageObjects.OdersPagePageObject;
+import pageObjects.UserAddressPO;
+import pageObjects.UserCustomerInforPO;
+import pageObjects.UserHomePO;
+import pageObjects.UserLoginPO;
+import pageObjects.UserMyProductReviewPO;
+import pageObjects.UserOdersPagePO;
 import pageObjects.PageGeneratorManager;
-import pageObjects.RegisterPageObject;
+import pageObjects.UserRegisterPO;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
@@ -71,7 +71,7 @@ public class Level_01_Register_Login extends AbstractTest {
 	@Test
 	public void TC_01_Register() {
 
-		homePage = PageGeneratorManager.getHomePage(driver);
+		homePage = PageGeneratorManager.getUserHomePage(driver);
 		// switch page( dam bao tinh dong goi, cac page co su lien ket voi nhau)
 		registerPage = homePage.clickToRegisterLink();
 		registerPage.clickToGenderMaleRadioButton();
@@ -126,11 +126,11 @@ public class Level_01_Register_Login extends AbstractTest {
 	@Test
 	public void TC_04_Switch_Page_Solution_2() {
 		customerInfoPage.openLinkByPageName(driver, "Addresses");
-		addressPage = PageGeneratorManager.getAddressesPage(driver);
+		addressPage = PageGeneratorManager.getUserAddressesPage(driver);
 		addressPage.openLinkByPageName(driver, "Customer info");
-		customerInfoPage = PageGeneratorManager.getCustomerInfoPage(driver);
+		customerInfoPage = PageGeneratorManager.getUserCustomerInfoPage(driver);
 		customerInfoPage.openLinkByPageName(driver, "My product reviews");
-		myProductReviewPage = PageGeneratorManager.getMyProductReviewPage(driver);
+		myProductReviewPage = PageGeneratorManager.getUserMyProductReviewPage(driver);
 	}
 
 	@AfterClass
@@ -140,11 +140,11 @@ public class Level_01_Register_Login extends AbstractTest {
 
 	}
 
-	HomePageObject homePage;
-	LoginPageObject loginPage;
-	CustomerInforPageObject customerInfoPage;
-	RegisterPageObject registerPage;
-	AddressPageObject addressPage;
-	MyProductReviewPageObject myProductReviewPage;
-	OdersPagePageObject odersPagePage;
+	UserHomePO homePage;
+	UserLoginPO loginPage;
+	UserCustomerInforPO customerInfoPage;
+	UserRegisterPO registerPage;
+	UserAddressPO addressPage;
+	UserMyProductReviewPO myProductReviewPage;
+	UserOdersPagePO odersPagePage;
 }

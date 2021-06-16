@@ -316,6 +316,14 @@ public class AbstractPage {
 		}
 
 	}
+	
+	public void checkToCheckBox(WebDriver driver, String locator,String... values) {
+		element = getElement(driver, getDynamicLocator(locator, values));
+		if (!element.isSelected()) {
+			element.click();
+		}
+
+	}
 
 	public void uncheckToCheckBox(WebDriver driver, String locator) {
 		element = getElement(driver, locator);
@@ -536,13 +544,13 @@ public class AbstractPage {
 		clickToElement(driver, AbstractPageUI.DYNAMIC_LINK, pageName);
 		switch (pageName) {
 		case "Addresses":
-			return PageGeneratorManager.getAddressesPage(driver);
+			return PageGeneratorManager.getUserAddressesPage(driver);
 		case "My Product Reviews":
-			return PageGeneratorManager.getMyProductReviewPage(driver);
+			return PageGeneratorManager.getUserMyProductReviewPage(driver);
 		case "Customer info":
-			return PageGeneratorManager.getCustomerInfoPage(driver);
+			return PageGeneratorManager.getUserCustomerInfoPage(driver);
 		default:
-			return PageGeneratorManager.getOdersPage(driver);
+			return PageGeneratorManager.getUserOdersPage(driver);
 
 		}
 	}

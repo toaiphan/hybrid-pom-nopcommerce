@@ -79,6 +79,69 @@ public class AbstractTest {
 
 		return driver;
 	}
+	
+	
+	protected WebDriver getBrowserDriver(String browserName,String url) {
+		// C1 de chay multi os
+		// setBrowserDriver();
+		// C2 :Dung WebDriverManager (
+		Browser browser = Browser.valueOf(browserName.toUpperCase());
+				
+
+		if (browser == Browser.FIREFOX_UI) {
+			// set geko driver
+
+			// WebDriverManager ( thu vien cua JAva): tu dong tai driver , tu dong set
+			// WebDriverManager.firefoxdriver().driverVersion("xxxxx").setup();( setup version, neu khong se tu tai ver moi nhat)
+// hoac browserVersion("xxxxx")
+			// Property
+			WebDriverManager.firefoxdriver().setup();
+
+			// khoi tao driver
+			driver = new FirefoxDriver();
+
+		} else if (browser == Browser.CHROME_UI) {
+			// set geko driver
+			WebDriverManager.chromedriver().setup();
+			// khoi tao driver
+			driver = new ChromeDriver();
+
+		} else if (browser == Browser.FIREFOX_HEADLESS) {
+			// set geko driver
+			WebDriverManager.firefoxdriver().setup();
+
+			FirefoxOptions options = new FirefoxOptions();
+			options.setHeadless(true);
+			driver = new FirefoxDriver(options);
+
+		} else if (browser == Browser.CHROME_HEADLESS) {
+			// set geko driver
+			WebDriverManager.chromedriver().setup();
+
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("headless");
+			options.addArguments("windown-size=1920x1080");
+			driver = new ChromeDriver(options);
+
+		} else if (browser == Browser.EDGE_CHROMIUM) {
+			// set geko driver
+			WebDriverManager.edgedriver().setup();
+
+			// khoi tao driver
+			driver = new EdgeDriver();
+
+		} else {
+
+			throw new RuntimeException("Please input valid browser name value");
+		}
+
+		// khoi tao implicit wait GlobalConstants.LONG_TIMEOUTs
+		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+		driver.get(url);
+
+		return driver;
+	}
 
 ///multi OS ------------------------------ CACH 1--------------------------------
 	private void setBrowserDriver() {

@@ -1,6 +1,6 @@
 package pageUIs;
 
-public class HomePageUI {
+public class UserHomePageUI {
 	// public : co the su trong o moi noi trong project
 	// static : khong can phai new doi tuong, van co the su dung duoc
 	// final : khong the gan lai trong qua trinh chay

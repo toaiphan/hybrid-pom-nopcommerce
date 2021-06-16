@@ -4,10 +4,10 @@ import org.openqa.selenium.WebDriver;
 
 import commons.AbstractPage;
 
-public class AddressPageObject extends AbstractPage {
+public class UserOdersPagePO extends AbstractPage {
 	WebDriver driver;
 
-	public AddressPageObject(WebDriver driver) {
+	public UserOdersPagePO(WebDriver driver) {
 		this.driver = driver;
 	}
 

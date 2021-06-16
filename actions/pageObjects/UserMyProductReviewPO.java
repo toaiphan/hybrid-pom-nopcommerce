@@ -4,10 +4,10 @@ import org.openqa.selenium.WebDriver;
 
 import commons.AbstractPage;
 
-public class MyProductReviewPageObject extends AbstractPage {
+public class UserMyProductReviewPO extends AbstractPage {
 	WebDriver driver;
 
-	public MyProductReviewPageObject(WebDriver driver) {
+	public UserMyProductReviewPO(WebDriver driver) {
 		this.driver = driver;
 	}
 
