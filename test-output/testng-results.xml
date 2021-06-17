@@ -1,45 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="NopCommerce" duration-ms="29147" started-at="2021-06-17T03:24:28Z" finished-at="2021-06-17T03:24:57Z">
+  <suite name="NopCommerce" duration-ms="35321" started-at="2021-06-17T14:11:36Z" finished-at="2021-06-17T14:12:11Z">
     <groups>
     </groups>
-    <test name="Run on FIREFOX UI" duration-ms="29147" started-at="2021-06-17T03:24:28Z" finished-at="2021-06-17T03:24:57Z">
-      <class name="com.nopcommerce.admin.Level_02_Web_Data_Table">
-        <test-method status="PASS" signature="beforeClass(java.lang.String, java.lang.String)[pri:0, instance:com.nopcommerce.admin.Level_02_Web_Data_Table@8bd1b6a]" name="beforeClass" is-config="true" duration-ms="19489" started-at="2021-06-17T03:24:28Z" finished-at="2021-06-17T03:24:47Z">
+    <test name="Run on FIREFOX UI" duration-ms="35321" started-at="2021-06-17T14:11:36Z" finished-at="2021-06-17T14:12:11Z">
+      <class name="com.nopcommerce.users.Level_01_Register_Login">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@8bd1b6a]" name="beforeClass" is-config="true" duration-ms="10431" started-at="2021-06-17T14:11:36Z" finished-at="2021-06-17T14:11:46Z">
           <params>
             <param index="0">
               <value>
                 <![CDATA[firefox_ui]]>
               </value>
             </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://admin-demo.nopcommerce.com/]]>
-              </value>
-            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="TC_01_Data_Table()[pri:0, instance:com.nopcommerce.admin.Level_02_Web_Data_Table@8bd1b6a]" name="TC_01_Data_Table" duration-ms="6036" started-at="2021-06-17T03:24:47Z" finished-at="2021-06-17T03:24:53Z">
+        <test-method status="PASS" signature="TC_01_Register()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@8bd1b6a]" name="TC_01_Register" duration-ms="8511" started-at="2021-06-17T14:11:46Z" finished-at="2021-06-17T14:11:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_01_Data_Table -->
-        <test-method status="PASS" signature="TC_02_Select_Deselect_All()[pri:0, instance:com.nopcommerce.admin.Level_02_Web_Data_Table@8bd1b6a]" name="TC_02_Select_Deselect_All" duration-ms="1419" started-at="2021-06-17T03:24:53Z" finished-at="2021-06-17T03:24:55Z">
+        </test-method> <!-- TC_01_Register -->
+        <test-method status="PASS" signature="TC_02_Login()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@8bd1b6a]" name="TC_02_Login" duration-ms="14909" started-at="2021-06-17T14:11:55Z" finished-at="2021-06-17T14:12:10Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_02_Select_Deselect_All -->
-        <test-method status="PASS" signature="TC_03_Displayed_All()[pri:0, instance:com.nopcommerce.admin.Level_02_Web_Data_Table@8bd1b6a]" name="TC_03_Displayed_All" duration-ms="547" started-at="2021-06-17T03:24:55Z" finished-at="2021-06-17T03:24:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_03_Displayed_All -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.nopcommerce.admin.Level_02_Web_Data_Table@8bd1b6a]" name="afterClass" is-config="true" duration-ms="1624" started-at="2021-06-17T03:24:55Z" finished-at="2021-06-17T03:24:57Z">
+        </test-method> <!-- TC_02_Login -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@8bd1b6a]" name="afterClass" is-config="true" duration-ms="1438" started-at="2021-06-17T14:12:10Z" finished-at="2021-06-17T14:12:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.nopcommerce.admin.Level_02_Web_Data_Table -->
+      </class> <!-- com.nopcommerce.users.Level_01_Register_Login -->
     </test> <!-- Run on FIREFOX UI -->
   </suite> <!-- NopCommerce -->
 </testng-results>
