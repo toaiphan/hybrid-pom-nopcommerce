@@ -98,9 +98,12 @@ public class Level_01_Register_Login extends AbstractTest {
 		homePage = loginPage.clickToLoginButton();
 		Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
 		Assert.assertTrue(homePage.isLogoutLinkDisplayed());
+		Assert.assertTrue(homePage.isRegisterLinkUndisplayed());
+
+		
 	}
 
-	@Test
+	//@Test
 	public void TC_03_View_My_Account() {
 		customerInfoPage = homePage.clickToMyAccountLink();
 		Assert.assertTrue(customerInfoPage.isGenderMaleRadioButtonSelected());
@@ -123,7 +126,7 @@ public class Level_01_Register_Login extends AbstractTest {
 //				"My product reviews");
 //	}
 
-	@Test
+	//@Test
 	public void TC_04_Switch_Page_Solution_2() {
 		customerInfoPage.openLinkByPageName(driver, "Addresses");
 		addressPage = PageGeneratorManager.getUserAddressesPage(driver);

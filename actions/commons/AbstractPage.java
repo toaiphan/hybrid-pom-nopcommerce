@@ -1,8 +1,10 @@
 package commons;
 //khi viet ham can chu y 5 van de : 
 
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -530,7 +532,14 @@ public class AbstractPage {
 
 	public void waitToElementInvisible(WebDriver driver, String locator) {
 		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
+		overideImplicitWait(driver, GlobalConstants.SHORT_TIMEOUT);
+		System.out.print("Start time = " + new Date().toString());
+
 		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(locator)));
+		System.out.print("End time = " + new Date().toString());
+
+		overideImplicitWait(driver, GlobalConstants.LONG_TIMEOUT);
+
 	}
 
 	public void waitToElementInvisible(WebDriver driver, String locator, String... values) {
@@ -590,8 +599,32 @@ public class AbstractPage {
 		fullFileName = fullFileName.trim();
 		sendKeyToElement(driver, AbstractPageUI.UPLOAD_FILE_TYPE_BY_PANEL, fullFileName, panelID);
 	}
-	
-	
+
+	public boolean isElementUndisplayed(WebDriver driver, String locator) {
+		System.out.print("Start time = " + new Date().toString());
+		overideImplicitWait(driver, GlobalConstants.SHORT_TIMEOUT);
+		elements = getElements(driver, locator);
+		overideImplicitWait(driver, GlobalConstants.LONG_TIMEOUT);
+		if (elements.size() == 0) {
+			System.out.print("Element ko hien thi tren UI va khong co trong DOM");
+			System.out.print("End time = " + new Date().toString());
+			return true;
+		} else if (elements.size() > 0 && !elements.get(0).isDisplayed()) {
+			System.out.print("Element ko hien thi tren UI va co trong DOM");
+			System.out.print("End time = " + new Date().toString());
+			return true;
+
+		} else {
+			System.out.print("Element co tren UI va co trong DOM");
+
+			return false;
+		}
+	}
+
+	public void overideImplicitWait(WebDriver driver, long timeInSecond) {
+		driver.manage().timeouts().implicitlyWait(timeInSecond, TimeUnit.SECONDS);
+	}
+
 	private WebDriverWait explicitWait;
 	private JavascriptExecutor jsExecutor;
 	private WebElement element;

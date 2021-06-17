@@ -57,4 +57,9 @@ public class UserHomePO extends AbstractPage {
 		
 	}
 
+	public boolean isRegisterLinkUndisplayed() {
+		waitToElementInvisible(driver, UserHomePageUI.REGISTER_LINK);
+		return isElementUndisplayed(driver, UserHomePageUI.REGISTER_LINK);
+	}
+
 }
