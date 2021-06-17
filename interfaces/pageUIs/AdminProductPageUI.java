@@ -13,6 +13,13 @@ public class AdminProductPageUI {
 	public static final String CELL_VALUE_MIX_BY_COLUMN_AND_ROW_INDEX = "//tr[%s]/td[%s]";
 	public static final String PUBLISH_STATUS_MIX_BY_COLUMN_AND_ROW_INDEX = "//tr[%s]/td[%s]/i[contains(@class,'%s-icon')]";
 	public static final String EDIT_ICON_BY_PRODUCT_NAME = "//td[text()='%s']/following-sibling::td/a";
+	public static final String PRODUCT_NAME_TEXTBOX = "//input[@id='SearchProductName']";
+	public static final String SEARCH_BUTTON = "//button[@id='search-products']";
+	public static final String PICTURE_PANEL = "//div[contains(text(),'Add a new picture')]";
+
+
+
+	
 
 
 

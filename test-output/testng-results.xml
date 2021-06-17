@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="NopCommerce" duration-ms="31901" started-at="2021-06-16T10:00:30Z" finished-at="2021-06-16T10:01:02Z">
+  <suite name="NopCommerce" duration-ms="29147" started-at="2021-06-17T03:24:28Z" finished-at="2021-06-17T03:24:57Z">
     <groups>
     </groups>
-    <test name="Run on FIREFOX UI" duration-ms="31901" started-at="2021-06-16T10:00:30Z" finished-at="2021-06-16T10:01:02Z">
+    <test name="Run on FIREFOX UI" duration-ms="29147" started-at="2021-06-17T03:24:28Z" finished-at="2021-06-17T03:24:57Z">
       <class name="com.nopcommerce.admin.Level_02_Web_Data_Table">
-        <test-method status="PASS" signature="beforeClass(java.lang.String, java.lang.String)[pri:0, instance:com.nopcommerce.admin.Level_02_Web_Data_Table@8bd1b6a]" name="beforeClass" is-config="true" duration-ms="22308" started-at="2021-06-16T10:00:30Z" finished-at="2021-06-16T10:00:52Z">
+        <test-method status="PASS" signature="beforeClass(java.lang.String, java.lang.String)[pri:0, instance:com.nopcommerce.admin.Level_02_Web_Data_Table@8bd1b6a]" name="beforeClass" is-config="true" duration-ms="19489" started-at="2021-06-17T03:24:28Z" finished-at="2021-06-17T03:24:47Z">
           <params>
             <param index="0">
               <value>
@@ -23,19 +23,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="TC_01_Data_Table()[pri:0, instance:com.nopcommerce.admin.Level_02_Web_Data_Table@8bd1b6a]" name="TC_01_Data_Table" duration-ms="6432" started-at="2021-06-16T10:00:52Z" finished-at="2021-06-16T10:00:58Z">
+        <test-method status="PASS" signature="TC_01_Data_Table()[pri:0, instance:com.nopcommerce.admin.Level_02_Web_Data_Table@8bd1b6a]" name="TC_01_Data_Table" duration-ms="6036" started-at="2021-06-17T03:24:47Z" finished-at="2021-06-17T03:24:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_01_Data_Table -->
-        <test-method status="PASS" signature="TC_02_Select_Deselect_All()[pri:0, instance:com.nopcommerce.admin.Level_02_Web_Data_Table@8bd1b6a]" name="TC_02_Select_Deselect_All" duration-ms="1463" started-at="2021-06-16T10:00:58Z" finished-at="2021-06-16T10:01:00Z">
+        <test-method status="PASS" signature="TC_02_Select_Deselect_All()[pri:0, instance:com.nopcommerce.admin.Level_02_Web_Data_Table@8bd1b6a]" name="TC_02_Select_Deselect_All" duration-ms="1419" started-at="2021-06-17T03:24:53Z" finished-at="2021-06-17T03:24:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_02_Select_Deselect_All -->
-        <test-method status="PASS" signature="TC_03_Displayed_All()[pri:0, instance:com.nopcommerce.admin.Level_02_Web_Data_Table@8bd1b6a]" name="TC_03_Displayed_All" duration-ms="90" started-at="2021-06-16T10:01:00Z" finished-at="2021-06-16T10:01:00Z">
+        <test-method status="PASS" signature="TC_03_Displayed_All()[pri:0, instance:com.nopcommerce.admin.Level_02_Web_Data_Table@8bd1b6a]" name="TC_03_Displayed_All" duration-ms="547" started-at="2021-06-17T03:24:55Z" finished-at="2021-06-17T03:24:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_03_Displayed_All -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.nopcommerce.admin.Level_02_Web_Data_Table@8bd1b6a]" name="afterClass" is-config="true" duration-ms="1568" started-at="2021-06-16T10:01:00Z" finished-at="2021-06-16T10:01:02Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.nopcommerce.admin.Level_02_Web_Data_Table@8bd1b6a]" name="afterClass" is-config="true" duration-ms="1624" started-at="2021-06-17T03:24:55Z" finished-at="2021-06-17T03:24:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->

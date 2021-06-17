@@ -303,7 +303,8 @@ public class AbstractPage {
 		return element.getText();
 
 	}
-	public String getElementText(WebDriver driver, String locator,String...values) {
+
+	public String getElementText(WebDriver driver, String locator, String... values) {
 		element = getElement(driver, getDynamicLocator(locator, values));
 		return element.getText();
 
@@ -313,7 +314,8 @@ public class AbstractPage {
 		return getElements(driver, locator).size();
 
 	}
-	public int countElementSize(WebDriver driver, String locator,String...values) {
+
+	public int countElementSize(WebDriver driver, String locator, String... values) {
 		return getElements(driver, getDynamicLocator(locator, values)).size();
 
 	}
@@ -325,8 +327,8 @@ public class AbstractPage {
 		}
 
 	}
-	
-	public void checkToCheckBox(WebDriver driver, String locator,String... values) {
+
+	public void checkToCheckBox(WebDriver driver, String locator, String... values) {
 		element = getElement(driver, getDynamicLocator(locator, values));
 		if (!element.isSelected()) {
 			element.click();
@@ -456,6 +458,7 @@ public class AbstractPage {
 	public void scrollToElement(WebDriver driver, String locator) {
 		jsExecutor = (JavascriptExecutor) driver;
 		jsExecutor.executeScript("arguments[0].scrollIntoView(true);", getElement(driver, locator));
+		sleepInSecond(1);
 	}
 
 	public void sendkeyToElementByJS(WebDriver driver, String locator, String value) {
@@ -547,6 +550,7 @@ public class AbstractPage {
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(getDynamicLocator(locator, values))));
 
 	}
+
 // neu 10-15 page thi co the lam cach nay
 	public AbstractPage openLinkByPageName(WebDriver driver, String pageName) {
 		waitToElementClickable(driver, AbstractPageUI.DYNAMIC_LINK, pageName);
@@ -563,18 +567,31 @@ public class AbstractPage {
 
 		}
 	}
+
 //neu nhieu page qua thi dung cach nay
 	public void openLinkWithPageName(WebDriver driver, String pageName) {
 		waitToElementClickable(driver, AbstractPageUI.DYNAMIC_LINK, pageName);
 		clickToElement(driver, AbstractPageUI.DYNAMIC_LINK, pageName);
-		
-	}
-	
-	public void waitAjaxLoadingInvisible(WebDriver driver) {
-		waitToElementInvisible(driver, AbstractPageUI.LOADING_ICON);
-		
+
 	}
 
+	public void waitAjaxLoadingInvisible(WebDriver driver) {
+		waitToElementInvisible(driver, AbstractPageUI.LOADING_ICON);
+
+	}
+
+	public void uploadFileByPanelID(WebDriver driver, String panelID, String... fileNames) {
+		String filePath = GlobalConstants.UPLOAD_FOLDER;
+		String fullFileName = "";
+		for (String file : fileNames) {
+			fullFileName = fullFileName + filePath + file + "\n";
+
+		}
+		fullFileName = fullFileName.trim();
+		sendKeyToElement(driver, AbstractPageUI.UPLOAD_FILE_TYPE_BY_PANEL, fullFileName, panelID);
+	}
+	
+	
 	private WebDriverWait explicitWait;
 	private JavascriptExecutor jsExecutor;
 	private WebElement element;

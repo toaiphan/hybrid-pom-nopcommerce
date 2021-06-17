@@ -8,8 +8,8 @@
       <class name="com.nopcommerce.admin.Level_02_Web_Data_Table">
         <methods>
           <include name="afterClass"/>
+          <include name="TC_03_Displayed_All"/>
           <include name="beforeClass"/>
-          <include name="TC_02_Select_Deselect_All"/>
         </methods>
       </class> <!-- com.nopcommerce.admin.Level_02_Web_Data_Table -->
     </classes>
