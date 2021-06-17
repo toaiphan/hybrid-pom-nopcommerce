@@ -303,9 +303,18 @@ public class AbstractPage {
 		return element.getText();
 
 	}
+	public String getElementText(WebDriver driver, String locator,String...values) {
+		element = getElement(driver, getDynamicLocator(locator, values));
+		return element.getText();
+
+	}
 
 	public int countElementSize(WebDriver driver, String locator) {
 		return getElements(driver, locator).size();
+
+	}
+	public int countElementSize(WebDriver driver, String locator,String...values) {
+		return getElements(driver, getDynamicLocator(locator, values)).size();
 
 	}
 
@@ -558,6 +567,11 @@ public class AbstractPage {
 	public void openLinkWithPageName(WebDriver driver, String pageName) {
 		waitToElementClickable(driver, AbstractPageUI.DYNAMIC_LINK, pageName);
 		clickToElement(driver, AbstractPageUI.DYNAMIC_LINK, pageName);
+		
+	}
+	
+	public void waitAjaxLoadingInvisible(WebDriver driver) {
+		waitToElementInvisible(driver, AbstractPageUI.LOADING_ICON);
 		
 	}
 

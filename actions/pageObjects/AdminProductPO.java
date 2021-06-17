@@ -69,4 +69,32 @@ public class AdminProductPO extends AbstractPage {
 		return isElementDisplayed(driver, AdminProductPageUI.PRODUCT_DETAIL_IN_TABLE, productName, skuID, price,
 				quantity, publicStatus);
 	}
+
+	public void selectShowItemDropdown(String itemNumber) {
+		waitToElementClickable(driver, AdminProductPageUI.SHOW_NUMBER_ITEM_DROPDOWN);
+		selectItemInDropdown(driver, AdminProductPageUI.SHOW_NUMBER_ITEM_DROPDOWN, itemNumber);
+
+	}
+
+	public boolean isInformationDisplayedAtColumnNameAndRowNumber(String culumeName, String rowIndex,
+			String expectedValue) {
+		// lay ra index cua column name
+		int columnNameIndex = countElementSize(driver, AdminProductPageUI.COLUMN_NAME_SIBLING, culumeName) + 1;
+		String actualValue = getElementText(driver, AdminProductPageUI.CELL_VALUE_MIX_BY_COLUMN_AND_ROW_INDEX, rowIndex,
+				String.valueOf(columnNameIndex));
+		return actualValue.equals(expectedValue);
+	}
+
+	public boolean isPublishStutusAtColumnNameAndRowNumber(String culumeName, String rowIndex, String publishStatus) {
+		// lay ra index cua column name
+		int columnNameIndex = countElementSize(driver, AdminProductPageUI.COLUMN_NAME_SIBLING, culumeName) + 1;
+		return isElementDisplayed(driver, AdminProductPageUI.PUBLISH_STATUS_MIX_BY_COLUMN_AND_ROW_INDEX, rowIndex,
+				String.valueOf(columnNameIndex), publishStatus);
+
+	}
+
+	public void clickToProductDetailByName(String productName) {
+		waitToElementClickable(driver, AdminProductPageUI.EDIT_ICON_BY_PRODUCT_NAME, productName);
+		clickToElement(driver, AdminProductPageUI.EDIT_ICON_BY_PRODUCT_NAME, productName);
+	}
 }

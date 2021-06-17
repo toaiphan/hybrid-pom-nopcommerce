@@ -20,13 +20,13 @@ public class Level_02_Web_Data_Table extends AbstractTest {
 
 	WebDriver driver;
 
-	@Parameters(value = {"browser","url"})
+	@Parameters(value = { "browser", "url" })
 
 	@BeforeClass
-	public void beforeClass(String browserName,String urlValue) {
+	public void beforeClass(String browserName, String urlValue) {
 		driver = getBrowserDriver(browserName, urlValue);
 		loginPage = PageGeneratorManager.getAdminLoginPage(driver);
-		dashboardPage =loginPage.loginToSystem("admin@yourstore.com","admin");
+		dashboardPage = loginPage.loginToSystem("admin@yourstore.com", "admin");
 		productPage = dashboardPage.openProductPage();
 	}
 
@@ -44,7 +44,7 @@ public class Level_02_Web_Data_Table extends AbstractTest {
 		Assert.assertTrue(productPage.isPageActivedAtTableByIndex("1"));
 
 	}
-	
+
 	@Test
 	public void TC_02_Select_Deselect_All() {
 		productPage.checkToSelectAllCheckbox();
@@ -55,23 +55,34 @@ public class Level_02_Web_Data_Table extends AbstractTest {
 		productPage.checkToProductCheckboxByName("Digital Storm VANQUISH 3 Custom Performance PC");
 
 	}
-	
+
 	@Test
 	public void TC_03_Displayed_All() {
-		Assert.assertTrue(productPage.areProductDetailDisplayed("Build your own computer","COMP_CUST","1200","10000","true"));
+		Assert.assertTrue(
+				productPage.areProductDetailDisplayed("Build your own computer", "COMP_CUST", "1200", "10000", "true"));
+		productPage.selectShowItemDropdown("50");
+		//Assert.assertTrue(productPage.areProductDetailDisplayed("Vintage Style Engagement Ring", "VS_ENG_RN", "2100",
+			//	"10000", "false"));
+		//ham de check thong tin tai vi tri cot x, hang y
+		Assert.assertTrue(productPage.isInformationDisplayedAtColumnNameAndRowNumber("Product name", "2", "Digital Storm VANQUISH 3 Custom Performance PC"));
+		Assert.assertTrue(productPage.isPublishStutusAtColumnNameAndRowNumber("Published", "2", "true"));
 
 	}
-
+	
+	@Test
+	public void TC_04_Edit() {
+		productPage.clickToProductDetailByName("Build your own computer");
+		productPage.backToPage(driver);
+	}
 
 	@AfterClass
 	public void afterClass() {
 		driver.quit();
 
 	}
-	
+
 	AdminLoginPO loginPage;
 	AdminDashboardPO dashboardPage;
 	AdminProductPO productPage;
-
 
 }
