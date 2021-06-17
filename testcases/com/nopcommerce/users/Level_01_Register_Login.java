@@ -85,7 +85,11 @@ public class Level_01_Register_Login extends AbstractTest {
 		registerPage.inputToPasswordTextbox(password);
 		registerPage.inputToConfirmPasswordTextbox(password);
 		registerPage.clickToRegisterButton();
-		Assert.assertEquals(registerPage.getRegisteredSuccessMessage(), "Your registration completed");
+		//Assert.assertEquals(registerPage.getRegisteredSuccessMessage(), "Your registration completed");
+		// co tinh cho fail
+		verifyEquals(registerPage.getRegisteredSuccessMessage(), "Your registration completedxx");
+		verifyEquals(registerPage.getRegisteredSuccessMessage(), "Your registration completedxxv");
+		verifyEquals(registerPage.getRegisteredSuccessMessage(), "Your registration completedxxvv");
 		homePage = registerPage.clickToLogoutLink();
 
 	}
@@ -96,14 +100,14 @@ public class Level_01_Register_Login extends AbstractTest {
 		loginPage.inputToEmailTextbox(email);
 		loginPage.inputToPasswordTextbox(password);
 		homePage = loginPage.clickToLoginButton();
-		Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
-		Assert.assertTrue(homePage.isLogoutLinkDisplayed());
-		Assert.assertTrue(homePage.isRegisterLinkUndisplayed());
+		verifyTrue(homePage.isMyAccountLinkDisplayed());
+		verifyFalse(homePage.isLogoutLinkDisplayed());
+		verifyFalse(homePage.isLogoutLinkDisplayed());
+		verifyTrue(homePage.isRegisterLinkUndisplayed());
 
-		
 	}
 
-	//@Test
+	// @Test
 	public void TC_03_View_My_Account() {
 		customerInfoPage = homePage.clickToMyAccountLink();
 		Assert.assertTrue(customerInfoPage.isGenderMaleRadioButtonSelected());
@@ -126,7 +130,7 @@ public class Level_01_Register_Login extends AbstractTest {
 //				"My product reviews");
 //	}
 
-	//@Test
+	// @Test
 	public void TC_04_Switch_Page_Solution_2() {
 		customerInfoPage.openLinkByPageName(driver, "Addresses");
 		addressPage = PageGeneratorManager.getUserAddressesPage(driver);
