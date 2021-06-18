@@ -1,0 +1,69 @@
+[INFO ] [2021-06-18 10:35:50,552] Register - Step 01: Open Home Page
+[INFO ] [2021-06-18 10:35:56,336]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 10:35:56,407]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 10:35:56,467]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 10:36:01,486]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-18 10:36:01,579]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 10:36:01,675]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 10:36:11,808]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-18 10:38:58,631] Register - Step 01: Open Home Page
+[INFO ] [2021-06-18 10:39:03,957] Register - Step 10: Verify Registered Success Message
+[INFO ] [2021-06-18 10:39:04,139]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 10:39:04,141] Register - Step 11: Verify Registered Success Message
+[INFO ] [2021-06-18 10:39:04,216]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 10:39:04,216] Register - Step 12: Verify Registered Success Message
+[INFO ] [2021-06-18 10:39:04,296]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 10:39:08,381] Login - Step 5: Verify My Account Link Displayed
+[INFO ] [2021-06-18 10:39:08,491]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-18 10:39:08,491] Login - Step 6: Verify Logout Link Displayed
+[INFO ] [2021-06-18 10:39:08,580]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 10:39:08,581] Login - Step 7: Verify Logout Link Displayed
+[INFO ] [2021-06-18 10:39:08,676]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 10:39:08,677] Login - Step 8: Verify Register Link Undisplayed
+[INFO ] [2021-06-18 10:39:18,940]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-18 10:48:55,858] Register - Step 01: Open Home Page
+[INFO ] [2021-06-18 10:49:02,335] Register - Step 10: Verify Registered Success Message
+[INFO ] [2021-06-18 10:49:02,435]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 10:49:02,437] Register - Step 11: Verify Registered Success Message
+[INFO ] [2021-06-18 10:49:02,503]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 10:49:02,504] Register - Step 12: Verify Registered Success Message
+[INFO ] [2021-06-18 10:49:02,592]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 10:49:07,381] Login - Step 5: Verify My Account Link Displayed
+[INFO ] [2021-06-18 10:49:07,497]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-18 10:49:07,497] Login - Step 6: Verify Logout Link Displayed
+[INFO ] [2021-06-18 10:49:07,594]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 10:49:07,594] Login - Step 7: Verify Logout Link Displayed
+[INFO ] [2021-06-18 10:49:07,683]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 10:49:07,683] Login - Step 8: Verify Register Link Undisplayed
+[INFO ] [2021-06-18 10:49:17,812]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-18 11:09:11,951] Register - Step 01: Open Home Page
+[INFO ] [2021-06-18 11:09:21,966] Register - Step 10: Verify Registered Success Message
+[INFO ] [2021-06-18 11:09:22,062]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 11:09:22,064] Register - Step 11: Verify Registered Success Message
+[INFO ] [2021-06-18 11:09:22,132]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 11:09:22,132] Register - Step 12: Verify Registered Success Message
+[INFO ] [2021-06-18 11:09:22,196]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 11:09:28,351] Login - Step 5: Verify My Account Link Displayed
+[INFO ] [2021-06-18 11:09:28,524]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-18 11:09:28,525] Login - Step 6: Verify Logout Link Displayed
+[INFO ] [2021-06-18 11:09:28,630]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 11:09:28,631] Login - Step 7: Verify Logout Link Displayed
+[INFO ] [2021-06-18 11:09:28,765]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 11:09:28,765] Login - Step 8: Verify Register Link Undisplayed
+[INFO ] [2021-06-18 11:09:38,900]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-18 11:09:56,654] Register - Step 01: Open Home Page
+[INFO ] [2021-06-18 11:12:12,186] Register - Step 01: Open Home Page
+[INFO ] [2021-06-18 11:12:26,787] Register - Step 10: Verify Registered Success Message
+[INFO ] [2021-06-18 11:12:27,508]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 11:12:27,508] Register - Step 11: Verify Registered Success Message
+[INFO ] [2021-06-18 11:12:27,760]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 11:12:27,761] Register - Step 12: Verify Registered Success Message
+[INFO ] [2021-06-18 11:12:27,980]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 11:12:38,351] Login - Step 5: Verify My Account Link Displayed
+[INFO ] [2021-06-18 11:12:39,132]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-18 11:12:39,132] Login - Step 6: Verify Logout Link Displayed
+[INFO ] [2021-06-18 11:12:39,415]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 11:12:39,425] Login - Step 7: Verify Logout Link Displayed
+[INFO ] [2021-06-18 11:12:39,735]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 11:12:39,735] Login - Step 8: Verify Register Link Undisplayed
+[INFO ] [2021-06-18 11:12:50,023]  -------------------------- PASSED -------------------------- 

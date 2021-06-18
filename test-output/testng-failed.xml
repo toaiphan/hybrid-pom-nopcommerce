@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [NopCommerce]">
+<suite name="Failed suite [NopCommerce User]">
   <listeners>
     <listener class-name="commons.MethodListener"/>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
   </listeners>
   <test thread-count="5" name="Run on FIREFOX UI(failed)">
     <parameter name="browser" value="firefox_ui"/>
@@ -17,4 +19,4 @@
       </class> <!-- com.nopcommerce.users.Level_01_Register_Login -->
     </classes>
   </test> <!-- Run on FIREFOX UI(failed) -->
-</suite> <!-- Failed suite [NopCommerce] -->
+</suite> <!-- Failed suite [NopCommerce User] -->

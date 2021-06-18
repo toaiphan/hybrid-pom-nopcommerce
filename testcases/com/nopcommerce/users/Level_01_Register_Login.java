@@ -70,8 +70,9 @@ public class Level_01_Register_Login extends AbstractTest {
 
 	@Test
 	public void TC_01_Register() {
-
+		log.info("Register - Step 01: Open Home Page");
 		homePage = PageGeneratorManager.getUserHomePage(driver);
+		
 		// switch page( dam bao tinh dong goi, cac page co su lien ket voi nhau)
 		registerPage = homePage.clickToRegisterLink();
 		registerPage.clickToGenderMaleRadioButton();
@@ -87,8 +88,13 @@ public class Level_01_Register_Login extends AbstractTest {
 		registerPage.clickToRegisterButton();
 		//Assert.assertEquals(registerPage.getRegisteredSuccessMessage(), "Your registration completed");
 		// co tinh cho fail
+		log.info("Register - Step 10: Verify Registered Success Message");
 		verifyEquals(registerPage.getRegisteredSuccessMessage(), "Your registration completedxx");
+		
+		log.info("Register - Step 11: Verify Registered Success Message");
 		verifyEquals(registerPage.getRegisteredSuccessMessage(), "Your registration completedxxv");
+		
+		log.info("Register - Step 12: Verify Registered Success Message");
 		verifyEquals(registerPage.getRegisteredSuccessMessage(), "Your registration completedxxvv");
 		homePage = registerPage.clickToLogoutLink();
 
@@ -100,9 +106,17 @@ public class Level_01_Register_Login extends AbstractTest {
 		loginPage.inputToEmailTextbox(email);
 		loginPage.inputToPasswordTextbox(password);
 		homePage = loginPage.clickToLoginButton();
+		
+		log.info("Login - Step 5: Verify My Account Link Displayed");
 		verifyTrue(homePage.isMyAccountLinkDisplayed());
+		
+		log.info("Login - Step 6: Verify Logout Link Displayed");
 		verifyFalse(homePage.isLogoutLinkDisplayed());
+		
+		log.info("Login - Step 7: Verify Logout Link Displayed");
 		verifyFalse(homePage.isLogoutLinkDisplayed());
+		
+		log.info("Login - Step 8: Verify Register Link Undisplayed");
 		verifyTrue(homePage.isRegisterLinkUndisplayed());
 
 	}

@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<suite name="NopCommerce" parallel="false">
+<suite name="NopCommerce User" parallel="false">
 	<listeners>
 		<listener class-name="commons.MethodListener" />
+
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener
+			class-name="org.uncommons.reportng.JUnitXMLReporter" />
+
 	</listeners>
 
 
@@ -13,35 +18,23 @@
 	</test> <!-- Test -->
 
 
-	<!--- <test name="Run on CHROME UI">
-  <parameter name = "browser" value= "chrome_ui"/>
-    <classes>
-      <class name="com.nopcommerce.users.Level_01_Register_Login"/>
-    </classes>
-  </test>  -->
+	<!--- <test name="Run on CHROME UI"> <parameter name = "browser" value= 
+		"chrome_ui"/> <classes> <class name="com.nopcommerce.users.Level_01_Register_Login"/> 
+		</classes> </test> -->
 
 
-	<!--- <test name="Run on FIREFOX HEADLESS">
-  <parameter name = "browser" value= "firefox_headless"/>
-    <classes>
-      <class name="com.nopcommerce.users.Level_01_Register_Login"/>
-    </classes>
-  </test> Test -->
+	<!--- <test name="Run on FIREFOX HEADLESS"> <parameter name = "browser" 
+		value= "firefox_headless"/> <classes> <class name="com.nopcommerce.users.Level_01_Register_Login"/> 
+		</classes> </test> Test -->
 
 
-	<!--- <test name="Run on CHROME HEADLESS">
-  <parameter name = "browser" value= "chrome_headless"/>
-    <classes>
-      <class name="com.nopcommerce.users.Level_01_Register_Login"/>
-    </classes>
-  </test> Test -->
+	<!--- <test name="Run on CHROME HEADLESS"> <parameter name = "browser" value= 
+		"chrome_headless"/> <classes> <class name="com.nopcommerce.users.Level_01_Register_Login"/> 
+		</classes> </test> Test -->
 
-	<!--- <test name="Run on EDGE CHROMIUM">
-  <parameter name = "browser" value= "edge_chromium"/>
-    <classes>
-      <class name="com.nopcommerce.users.Level_01_Register_Login"/>
-    </classes>
-  </test> Test -->
+	<!--- <test name="Run on EDGE CHROMIUM"> <parameter name = "browser" value= 
+		"edge_chromium"/> <classes> <class name="com.nopcommerce.users.Level_01_Register_Login"/> 
+		</classes> </test> Test -->
 
 
 </suite> <!-- Suite -->

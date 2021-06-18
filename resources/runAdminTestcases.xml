@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<suite name="NopCommerce" parallel="false">
-
+<suite name="NopCommerce Admin" >
 
 	<test name="Run on FIREFOX UI">
 		<parameter name="browser" value="firefox_ui" />
