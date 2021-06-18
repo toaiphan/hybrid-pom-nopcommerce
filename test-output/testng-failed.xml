@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [NopCommerce]">
+  <listeners>
+    <listener class-name="commons.MethodListener"/>
+  </listeners>
   <test thread-count="5" name="Run on FIREFOX UI(failed)">
     <parameter name="browser" value="firefox_ui"/>
-    <parameter name="url" value="https://admin-demo.nopcommerce.com/"/>
     <classes>
-      <class name="com.nopcommerce.admin.Level_02_Web_Data_Table">
+      <class name="com.nopcommerce.users.Level_01_Register_Login">
         <methods>
+          <include name="TC_01_Register"/>
+          <include name="TC_02_Login"/>
           <include name="afterClass"/>
-          <include name="TC_03_Displayed_All"/>
           <include name="beforeClass"/>
         </methods>
-      </class> <!-- com.nopcommerce.admin.Level_02_Web_Data_Table -->
+      </class> <!-- com.nopcommerce.users.Level_01_Register_Login -->
     </classes>
   </test> <!-- Run on FIREFOX UI(failed) -->
 </suite> <!-- Failed suite [NopCommerce] -->
