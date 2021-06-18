@@ -1,855 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="8" failed="2" ignored="0" total="10" passed="0">
+<testng-results skipped="0" failed="2" ignored="0" total="2" passed="0">
   <reporter-output>
     <line>
-      <![CDATA[[INFO ] [2021-06-18 11:12:12,186] Register - Step 01: Open Home Page
+      <![CDATA[[INFO ] [2021-06-18 16:55:02,706] Register - Step 01: Open Home Page
 <br>]]>
     </line>
     <line>
-      <![CDATA[[INFO ] [2021-06-18 11:12:26,787] Register - Step 10: Verify Registered Success Message
+      <![CDATA[[INFO ] [2021-06-18 16:55:21,484] Register - Step 10: Verify Registered Success Message
 <br>]]>
     </line>
     <line>
-      <![CDATA[[INFO ] [2021-06-18 11:12:27,508]  -------------------------- FAILED -------------------------- 
+      <![CDATA[[INFO ] [2021-06-18 16:55:21,725]  -------------------------- FAILED -------------------------- 
 <br>]]>
     </line>
     <line>
-      <![CDATA[[INFO ] [2021-06-18 11:12:27,508] Register - Step 11: Verify Registered Success Message
+      <![CDATA[[INFO ] [2021-06-18 16:55:21,750] Register - Step 11: Verify Registered Success Message
 <br>]]>
     </line>
     <line>
-      <![CDATA[[INFO ] [2021-06-18 11:12:27,760]  -------------------------- FAILED -------------------------- 
+      <![CDATA[[INFO ] [2021-06-18 16:55:23,075]  -------------------------- FAILED -------------------------- 
 <br>]]>
     </line>
     <line>
-      <![CDATA[[INFO ] [2021-06-18 11:12:27,761] Register - Step 12: Verify Registered Success Message
+      <![CDATA[[INFO ] [2021-06-18 16:55:23,076] Register - Step 12: Verify Registered Success Message
 <br>]]>
     </line>
     <line>
-      <![CDATA[[INFO ] [2021-06-18 11:12:27,980]  -------------------------- FAILED -------------------------- 
+      <![CDATA[[INFO ] [2021-06-18 16:55:23,465]  -------------------------- FAILED -------------------------- 
 <br>]]>
     </line>
     <line>
-      <![CDATA[[INFO ] [2021-06-18 11:12:38,351] Login - Step 5: Verify My Account Link Displayed
+      <![CDATA[[INFO ] [2021-06-18 16:55:41,074] Login - Step 5: Verify My Account Link Displayed
 <br>]]>
     </line>
     <line>
-      <![CDATA[[INFO ] [2021-06-18 11:12:39,132]  -------------------------- PASSED -------------------------- 
+      <![CDATA[[INFO ] [2021-06-18 16:55:41,866]  -------------------------- PASSED -------------------------- 
 <br>]]>
     </line>
     <line>
-      <![CDATA[[INFO ] [2021-06-18 11:12:39,132] Login - Step 6: Verify Logout Link Displayed
+      <![CDATA[[INFO ] [2021-06-18 16:55:41,866] Login - Step 6: Verify Logout Link Displayed
 <br>]]>
     </line>
     <line>
-      <![CDATA[[INFO ] [2021-06-18 11:12:39,415]  -------------------------- FAILED -------------------------- 
+      <![CDATA[[INFO ] [2021-06-18 16:55:42,464]  -------------------------- FAILED -------------------------- 
 <br>]]>
     </line>
     <line>
-      <![CDATA[[INFO ] [2021-06-18 11:12:39,425] Login - Step 7: Verify Logout Link Displayed
+      <![CDATA[[INFO ] [2021-06-18 16:55:42,464] Login - Step 7: Verify Logout Link Displayed
 <br>]]>
     </line>
     <line>
-      <![CDATA[[INFO ] [2021-06-18 11:12:39,735]  -------------------------- FAILED -------------------------- 
+      <![CDATA[[INFO ] [2021-06-18 16:55:42,864]  -------------------------- FAILED -------------------------- 
 <br>]]>
     </line>
     <line>
-      <![CDATA[[INFO ] [2021-06-18 11:12:39,735] Login - Step 8: Verify Register Link Undisplayed
+      <![CDATA[[INFO ] [2021-06-18 16:55:42,864] Login - Step 8: Verify Register Link Undisplayed
 <br>]]>
     </line>
     <line>
-      <![CDATA[[INFO ] [2021-06-18 11:12:50,023]  -------------------------- PASSED -------------------------- 
+      <![CDATA[[INFO ] [2021-06-18 16:55:53,593]  -------------------------- PASSED -------------------------- 
 <br>]]>
     </line>
   </reporter-output>
-  <suite name="NopCommerce Admin" duration-ms="47216" started-at="2021-06-18T04:10:52Z" finished-at="2021-06-18T04:11:39Z">
+  <suite name="NopCommerce User" duration-ms="112441" started-at="2021-06-18T09:54:11Z" finished-at="2021-06-18T09:56:03Z">
     <groups>
     </groups>
-    <test name="Run on FIREFOX UI" duration-ms="47216" started-at="2021-06-18T04:10:52Z" finished-at="2021-06-18T04:11:39Z">
-      <class name="com.nopcommerce.admin.Level_02_Web_Data_Table">
-        <test-method status="FAIL" signature="beforeClass(java.lang.String, java.lang.String)[pri:0, instance:com.nopcommerce.admin.Level_02_Web_Data_Table@6043cd28]" name="beforeClass" is-config="true" duration-ms="47020" started-at="2021-06-18T04:10:52Z" finished-at="2021-06-18T04:11:39Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox_ui]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://admin-demo.nopcommerce.com/]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //a[@class='nav-link active']/p[contains(text(),'Catalog')] (tried for 30 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@class='nav-link active']/p[contains(text(),'Catalog')] (tried for 30 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at commons.AbstractPage.waitToElementClickable(AbstractPage.java:553)
-at pageObjects.AdminDashboardPO.openProductPage(AdminDashboardPO.java:16)
-at com.nopcommerce.admin.Level_02_Web_Data_Table.beforeClass(Level_02_Web_Data_Table.java:30)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1204)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //a[@class='nav-link active']/p[contains(text(),'Catalog')]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'DESKTOP-4LGOUIP', ip: '192.168.1.14', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 89.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210614221319, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 4132, moz:profile: C:\Users\TOAI-HANG\AppData\..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 448e21b4-cb86-4cfb-8042-0f68d6216a9d
-*** Element info: {Using=xpath, value=//a[@class='nav-link active']/p[contains(text(),'Catalog')]}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-... 30 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="SKIP" signature="TC_01_Data_Table()[pri:0, instance:com.nopcommerce.admin.Level_02_Web_Data_Table@6043cd28]" name="TC_01_Data_Table" duration-ms="0" started-at="2021-06-18T04:11:39Z" finished-at="2021-06-18T04:11:39Z">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //a[@class='nav-link active']/p[contains(text(),'Catalog')] (tried for 30 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@class='nav-link active']/p[contains(text(),'Catalog')] (tried for 30 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at commons.AbstractPage.waitToElementClickable(AbstractPage.java:553)
-at pageObjects.AdminDashboardPO.openProductPage(AdminDashboardPO.java:16)
-at com.nopcommerce.admin.Level_02_Web_Data_Table.beforeClass(Level_02_Web_Data_Table.java:30)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1204)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //a[@class='nav-link active']/p[contains(text(),'Catalog')]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'DESKTOP-4LGOUIP', ip: '192.168.1.14', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 89.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210614221319, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 4132, moz:profile: C:\Users\TOAI-HANG\AppData\..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 448e21b4-cb86-4cfb-8042-0f68d6216a9d
-*** Element info: {Using=xpath, value=//a[@class='nav-link active']/p[contains(text(),'Catalog')]}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-... 30 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_01_Data_Table -->
-        <test-method status="SKIP" signature="TC_02_Select_Deselect_All()[pri:0, instance:com.nopcommerce.admin.Level_02_Web_Data_Table@6043cd28]" name="TC_02_Select_Deselect_All" duration-ms="0" started-at="2021-06-18T04:11:39Z" finished-at="2021-06-18T04:11:39Z">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //a[@class='nav-link active']/p[contains(text(),'Catalog')] (tried for 30 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@class='nav-link active']/p[contains(text(),'Catalog')] (tried for 30 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at commons.AbstractPage.waitToElementClickable(AbstractPage.java:553)
-at pageObjects.AdminDashboardPO.openProductPage(AdminDashboardPO.java:16)
-at com.nopcommerce.admin.Level_02_Web_Data_Table.beforeClass(Level_02_Web_Data_Table.java:30)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1204)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //a[@class='nav-link active']/p[contains(text(),'Catalog')]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'DESKTOP-4LGOUIP', ip: '192.168.1.14', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 89.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210614221319, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 4132, moz:profile: C:\Users\TOAI-HANG\AppData\..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 448e21b4-cb86-4cfb-8042-0f68d6216a9d
-*** Element info: {Using=xpath, value=//a[@class='nav-link active']/p[contains(text(),'Catalog')]}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-... 30 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_02_Select_Deselect_All -->
-        <test-method status="SKIP" signature="TC_03_Displayed_All()[pri:0, instance:com.nopcommerce.admin.Level_02_Web_Data_Table@6043cd28]" name="TC_03_Displayed_All" duration-ms="0" started-at="2021-06-18T04:11:39Z" finished-at="2021-06-18T04:11:39Z">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //a[@class='nav-link active']/p[contains(text(),'Catalog')] (tried for 30 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@class='nav-link active']/p[contains(text(),'Catalog')] (tried for 30 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at commons.AbstractPage.waitToElementClickable(AbstractPage.java:553)
-at pageObjects.AdminDashboardPO.openProductPage(AdminDashboardPO.java:16)
-at com.nopcommerce.admin.Level_02_Web_Data_Table.beforeClass(Level_02_Web_Data_Table.java:30)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1204)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //a[@class='nav-link active']/p[contains(text(),'Catalog')]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'DESKTOP-4LGOUIP', ip: '192.168.1.14', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 89.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210614221319, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 4132, moz:profile: C:\Users\TOAI-HANG\AppData\..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 448e21b4-cb86-4cfb-8042-0f68d6216a9d
-*** Element info: {Using=xpath, value=//a[@class='nav-link active']/p[contains(text(),'Catalog')]}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-... 30 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_03_Displayed_All -->
-        <test-method status="SKIP" signature="TC_04_Edit()[pri:0, instance:com.nopcommerce.admin.Level_02_Web_Data_Table@6043cd28]" name="TC_04_Edit" duration-ms="0" started-at="2021-06-18T04:11:39Z" finished-at="2021-06-18T04:11:39Z">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //a[@class='nav-link active']/p[contains(text(),'Catalog')] (tried for 30 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@class='nav-link active']/p[contains(text(),'Catalog')] (tried for 30 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at commons.AbstractPage.waitToElementClickable(AbstractPage.java:553)
-at pageObjects.AdminDashboardPO.openProductPage(AdminDashboardPO.java:16)
-at com.nopcommerce.admin.Level_02_Web_Data_Table.beforeClass(Level_02_Web_Data_Table.java:30)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1204)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //a[@class='nav-link active']/p[contains(text(),'Catalog')]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'DESKTOP-4LGOUIP', ip: '192.168.1.14', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 89.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210614221319, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 4132, moz:profile: C:\Users\TOAI-HANG\AppData\..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 448e21b4-cb86-4cfb-8042-0f68d6216a9d
-*** Element info: {Using=xpath, value=//a[@class='nav-link active']/p[contains(text(),'Catalog')]}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-... 30 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_04_Edit -->
-        <test-method status="SKIP" signature="afterClass()[pri:0, instance:com.nopcommerce.admin.Level_02_Web_Data_Table@6043cd28]" name="afterClass" is-config="true" duration-ms="0" started-at="2021-06-18T04:11:39Z" finished-at="2021-06-18T04:11:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.nopcommerce.admin.Level_02_Web_Data_Table -->
-    </test> <!-- Run on FIREFOX UI -->
-  </suite> <!-- NopCommerce Admin -->
-  <suite name="NopCommerce Admin (0)" duration-ms="112204" started-at="2021-06-18T04:13:06Z" finished-at="2021-06-18T04:14:58Z">
-    <groups>
-    </groups>
-    <test name="Run on FIREFOX UI" duration-ms="112204" started-at="2021-06-18T04:13:06Z" finished-at="2021-06-18T04:14:58Z">
-      <class name="com.nopcommerce.admin.Level_02_Web_Data_Table">
-        <test-method status="FAIL" signature="beforeClass(java.lang.String, java.lang.String)[pri:0, instance:com.nopcommerce.admin.Level_02_Web_Data_Table@4671e53b]" name="beforeClass" is-config="true" duration-ms="112057" started-at="2021-06-18T04:13:06Z" finished-at="2021-06-18T04:14:58Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox_ui]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://admin-demo.nopcommerce.com/]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //a[@class='nav-link active']/p[contains(text(),'Catalog')] (tried for 30 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@class='nav-link active']/p[contains(text(),'Catalog')] (tried for 30 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at commons.AbstractPage.waitToElementClickable(AbstractPage.java:553)
-at pageObjects.AdminDashboardPO.openProductPage(AdminDashboardPO.java:16)
-at com.nopcommerce.admin.Level_02_Web_Data_Table.beforeClass(Level_02_Web_Data_Table.java:30)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1204)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //a[@class='nav-link active']/p[contains(text(),'Catalog')]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'DESKTOP-4LGOUIP', ip: '192.168.1.14', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 89.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210614221319, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 1204, moz:profile: C:\Users\TOAI-HANG\AppData\..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 39778810-f785-40cc-90dc-75f056c7d143
-*** Element info: {Using=xpath, value=//a[@class='nav-link active']/p[contains(text(),'Catalog')]}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-... 30 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="SKIP" signature="TC_01_Data_Table()[pri:0, instance:com.nopcommerce.admin.Level_02_Web_Data_Table@4671e53b]" name="TC_01_Data_Table" duration-ms="0" started-at="2021-06-18T04:14:58Z" finished-at="2021-06-18T04:14:58Z">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //a[@class='nav-link active']/p[contains(text(),'Catalog')] (tried for 30 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@class='nav-link active']/p[contains(text(),'Catalog')] (tried for 30 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at commons.AbstractPage.waitToElementClickable(AbstractPage.java:553)
-at pageObjects.AdminDashboardPO.openProductPage(AdminDashboardPO.java:16)
-at com.nopcommerce.admin.Level_02_Web_Data_Table.beforeClass(Level_02_Web_Data_Table.java:30)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1204)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //a[@class='nav-link active']/p[contains(text(),'Catalog')]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'DESKTOP-4LGOUIP', ip: '192.168.1.14', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 89.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210614221319, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 1204, moz:profile: C:\Users\TOAI-HANG\AppData\..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 39778810-f785-40cc-90dc-75f056c7d143
-*** Element info: {Using=xpath, value=//a[@class='nav-link active']/p[contains(text(),'Catalog')]}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-... 30 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_01_Data_Table -->
-        <test-method status="SKIP" signature="TC_02_Select_Deselect_All()[pri:0, instance:com.nopcommerce.admin.Level_02_Web_Data_Table@4671e53b]" name="TC_02_Select_Deselect_All" duration-ms="0" started-at="2021-06-18T04:14:58Z" finished-at="2021-06-18T04:14:58Z">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //a[@class='nav-link active']/p[contains(text(),'Catalog')] (tried for 30 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@class='nav-link active']/p[contains(text(),'Catalog')] (tried for 30 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at commons.AbstractPage.waitToElementClickable(AbstractPage.java:553)
-at pageObjects.AdminDashboardPO.openProductPage(AdminDashboardPO.java:16)
-at com.nopcommerce.admin.Level_02_Web_Data_Table.beforeClass(Level_02_Web_Data_Table.java:30)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1204)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //a[@class='nav-link active']/p[contains(text(),'Catalog')]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'DESKTOP-4LGOUIP', ip: '192.168.1.14', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 89.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210614221319, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 1204, moz:profile: C:\Users\TOAI-HANG\AppData\..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 39778810-f785-40cc-90dc-75f056c7d143
-*** Element info: {Using=xpath, value=//a[@class='nav-link active']/p[contains(text(),'Catalog')]}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-... 30 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_02_Select_Deselect_All -->
-        <test-method status="SKIP" signature="TC_03_Displayed_All()[pri:0, instance:com.nopcommerce.admin.Level_02_Web_Data_Table@4671e53b]" name="TC_03_Displayed_All" duration-ms="0" started-at="2021-06-18T04:14:58Z" finished-at="2021-06-18T04:14:58Z">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //a[@class='nav-link active']/p[contains(text(),'Catalog')] (tried for 30 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@class='nav-link active']/p[contains(text(),'Catalog')] (tried for 30 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at commons.AbstractPage.waitToElementClickable(AbstractPage.java:553)
-at pageObjects.AdminDashboardPO.openProductPage(AdminDashboardPO.java:16)
-at com.nopcommerce.admin.Level_02_Web_Data_Table.beforeClass(Level_02_Web_Data_Table.java:30)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1204)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //a[@class='nav-link active']/p[contains(text(),'Catalog')]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'DESKTOP-4LGOUIP', ip: '192.168.1.14', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 89.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210614221319, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 1204, moz:profile: C:\Users\TOAI-HANG\AppData\..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 39778810-f785-40cc-90dc-75f056c7d143
-*** Element info: {Using=xpath, value=//a[@class='nav-link active']/p[contains(text(),'Catalog')]}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-... 30 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_03_Displayed_All -->
-        <test-method status="SKIP" signature="TC_04_Edit()[pri:0, instance:com.nopcommerce.admin.Level_02_Web_Data_Table@4671e53b]" name="TC_04_Edit" duration-ms="0" started-at="2021-06-18T04:14:58Z" finished-at="2021-06-18T04:14:58Z">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //a[@class='nav-link active']/p[contains(text(),'Catalog')] (tried for 30 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@class='nav-link active']/p[contains(text(),'Catalog')] (tried for 30 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at commons.AbstractPage.waitToElementClickable(AbstractPage.java:553)
-at pageObjects.AdminDashboardPO.openProductPage(AdminDashboardPO.java:16)
-at com.nopcommerce.admin.Level_02_Web_Data_Table.beforeClass(Level_02_Web_Data_Table.java:30)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1204)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //a[@class='nav-link active']/p[contains(text(),'Catalog')]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'DESKTOP-4LGOUIP', ip: '192.168.1.14', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 89.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210614221319, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 1204, moz:profile: C:\Users\TOAI-HANG\AppData\..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 39778810-f785-40cc-90dc-75f056c7d143
-*** Element info: {Using=xpath, value=//a[@class='nav-link active']/p[contains(text(),'Catalog')]}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-... 30 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_04_Edit -->
-        <test-method status="SKIP" signature="afterClass()[pri:0, instance:com.nopcommerce.admin.Level_02_Web_Data_Table@4671e53b]" name="afterClass" is-config="true" duration-ms="0" started-at="2021-06-18T04:14:58Z" finished-at="2021-06-18T04:14:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.nopcommerce.admin.Level_02_Web_Data_Table -->
-    </test> <!-- Run on FIREFOX UI -->
-  </suite> <!-- NopCommerce Admin (0) -->
-  <suite name="NopCommerce User_Admin" duration-ms="0" started-at="2021-06-18T04:15:04Z" finished-at="2021-06-18T04:15:04Z">
-    <groups>
-    </groups>
-  </suite> <!-- NopCommerce User_Admin -->
-  <suite name="NopCommerce User" duration-ms="86354" started-at="2021-06-18T04:11:39Z" finished-at="2021-06-18T04:13:05Z">
-    <groups>
-    </groups>
-    <test name="Run on FIREFOX UI" duration-ms="86354" started-at="2021-06-18T04:11:39Z" finished-at="2021-06-18T04:13:05Z">
+    <test name="Run on FIREFOX UI" duration-ms="112441" started-at="2021-06-18T09:54:11Z" finished-at="2021-06-18T09:56:03Z">
       <class name="com.nopcommerce.users.Level_01_Register_Login">
-        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@6a1aab78]" name="beforeClass" is-config="true" duration-ms="32655" started-at="2021-06-18T04:11:39Z" finished-at="2021-06-18T04:12:12Z">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@6e20b53a]" name="beforeClass" is-config="true" duration-ms="50452" started-at="2021-06-18T09:54:11Z" finished-at="2021-06-18T09:55:01Z">
           <params>
             <param index="0">
               <value>
@@ -860,7 +78,7 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="FAIL" signature="TC_01_Register()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@6a1aab78]" name="TC_01_Register" duration-ms="19036" started-at="2021-06-18T04:12:12Z" finished-at="2021-06-18T04:12:31Z">
+        <test-method status="FAIL" signature="TC_01_Register()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@6e20b53a]" name="TC_01_Register" duration-ms="28209" started-at="2021-06-18T09:55:01Z" finished-at="2021-06-18T09:55:29Z">
           <exception class="java.lang.Throwable">
             <message>
               <![CDATA[Multiple failures (3):
@@ -871,8 +89,8 @@ at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:442)
-at commons.AbstractTest.checkEquals(AbstractTest.java:266)
-at commons.AbstractTest.verifyEquals(AbstractTest.java:278)
+at commons.AbstractTest.checkEquals(AbstractTest.java:268)
+at commons.AbstractTest.verifyEquals(AbstractTest.java:280)
 at com.nopcommerce.users.Level_01_Register_Login.TC_01_Register(Level_01_Register_Login.java:92)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
@@ -893,7 +111,6 @@ at org.testng.SuiteRunner.run(SuiteRunner.java:364)
 at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
 at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
 at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1204)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
 at org.testng.TestNG.runSuites(TestNG.java:1049)
 at org.testng.TestNG.run(TestNG.java:1017)
@@ -908,8 +125,8 @@ at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:442)
-at commons.AbstractTest.checkEquals(AbstractTest.java:266)
-at commons.AbstractTest.verifyEquals(AbstractTest.java:278)
+at commons.AbstractTest.checkEquals(AbstractTest.java:268)
+at commons.AbstractTest.verifyEquals(AbstractTest.java:280)
 at com.nopcommerce.users.Level_01_Register_Login.TC_01_Register(Level_01_Register_Login.java:95)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
@@ -930,7 +147,6 @@ at org.testng.SuiteRunner.run(SuiteRunner.java:364)
 at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
 at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
 at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1204)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
 at org.testng.TestNG.runSuites(TestNG.java:1049)
 at org.testng.TestNG.run(TestNG.java:1017)
@@ -950,8 +166,8 @@ at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:442)
-at commons.AbstractTest.checkEquals(AbstractTest.java:266)
-at commons.AbstractTest.verifyEquals(AbstractTest.java:278)
+at commons.AbstractTest.checkEquals(AbstractTest.java:268)
+at commons.AbstractTest.verifyEquals(AbstractTest.java:280)
 at com.nopcommerce.users.Level_01_Register_Login.TC_01_Register(Level_01_Register_Login.java:92)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
@@ -972,7 +188,6 @@ at org.testng.SuiteRunner.run(SuiteRunner.java:364)
 at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
 at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
 at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1204)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
 at org.testng.TestNG.runSuites(TestNG.java:1049)
 at org.testng.TestNG.run(TestNG.java:1017)
@@ -987,8 +202,8 @@ at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:442)
-at commons.AbstractTest.checkEquals(AbstractTest.java:266)
-at commons.AbstractTest.verifyEquals(AbstractTest.java:278)
+at commons.AbstractTest.checkEquals(AbstractTest.java:268)
+at commons.AbstractTest.verifyEquals(AbstractTest.java:280)
 at com.nopcommerce.users.Level_01_Register_Login.TC_01_Register(Level_01_Register_Login.java:95)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
@@ -1009,7 +224,6 @@ at org.testng.SuiteRunner.run(SuiteRunner.java:364)
 at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
 at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
 at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1204)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
 at org.testng.TestNG.runSuites(TestNG.java:1049)
 at org.testng.TestNG.run(TestNG.java:1017)
@@ -1024,8 +238,8 @@ at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:442)
-at commons.AbstractTest.checkEquals(AbstractTest.java:266)
-at commons.AbstractTest.verifyEquals(AbstractTest.java:278)
+at commons.AbstractTest.checkEquals(AbstractTest.java:268)
+at commons.AbstractTest.verifyEquals(AbstractTest.java:280)
 at com.nopcommerce.users.Level_01_Register_Login.TC_01_Register(Level_01_Register_Login.java:98)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
@@ -1046,7 +260,6 @@ at org.testng.SuiteRunner.run(SuiteRunner.java:364)
 at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
 at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
 at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1204)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
 at org.testng.TestNG.runSuites(TestNG.java:1049)
 at org.testng.TestNG.run(TestNG.java:1017)
@@ -1058,36 +271,36 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.Throwable -->
           <reporter-output>
             <line>
-              <![CDATA[[INFO ] [2021-06-18 11:12:12,186] Register - Step 01: Open Home Page
+              <![CDATA[[INFO ] [2021-06-18 16:55:02,706] Register - Step 01: Open Home Page
 <br>]]>
             </line>
             <line>
-              <![CDATA[[INFO ] [2021-06-18 11:12:26,787] Register - Step 10: Verify Registered Success Message
+              <![CDATA[[INFO ] [2021-06-18 16:55:21,484] Register - Step 10: Verify Registered Success Message
 <br>]]>
             </line>
             <line>
-              <![CDATA[[INFO ] [2021-06-18 11:12:27,508]  -------------------------- FAILED -------------------------- 
+              <![CDATA[[INFO ] [2021-06-18 16:55:21,725]  -------------------------- FAILED -------------------------- 
 <br>]]>
             </line>
             <line>
-              <![CDATA[[INFO ] [2021-06-18 11:12:27,508] Register - Step 11: Verify Registered Success Message
+              <![CDATA[[INFO ] [2021-06-18 16:55:21,750] Register - Step 11: Verify Registered Success Message
 <br>]]>
             </line>
             <line>
-              <![CDATA[[INFO ] [2021-06-18 11:12:27,760]  -------------------------- FAILED -------------------------- 
+              <![CDATA[[INFO ] [2021-06-18 16:55:23,075]  -------------------------- FAILED -------------------------- 
 <br>]]>
             </line>
             <line>
-              <![CDATA[[INFO ] [2021-06-18 11:12:27,761] Register - Step 12: Verify Registered Success Message
+              <![CDATA[[INFO ] [2021-06-18 16:55:23,076] Register - Step 12: Verify Registered Success Message
 <br>]]>
             </line>
             <line>
-              <![CDATA[[INFO ] [2021-06-18 11:12:27,980]  -------------------------- FAILED -------------------------- 
+              <![CDATA[[INFO ] [2021-06-18 16:55:23,465]  -------------------------- FAILED -------------------------- 
 <br>]]>
             </line>
           </reporter-output>
         </test-method> <!-- TC_01_Register -->
-        <test-method status="FAIL" signature="TC_02_Login()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@6a1aab78]" name="TC_02_Login" duration-ms="18799" started-at="2021-06-18T04:12:31Z" finished-at="2021-06-18T04:12:50Z">
+        <test-method status="FAIL" signature="TC_02_Login()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@6e20b53a]" name="TC_02_Login" duration-ms="21153" started-at="2021-06-18T09:55:32Z" finished-at="2021-06-18T09:55:53Z">
           <exception class="java.lang.Throwable">
             <message>
               <![CDATA[Multiple failures (2):
@@ -1097,8 +310,8 @@ at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertFalse(Assert.java:65)
 at org.testng.Assert.assertFalse(Assert.java:75)
-at commons.AbstractTest.checkFailed(AbstractTest.java:250)
-at commons.AbstractTest.verifyFalse(AbstractTest.java:260)
+at commons.AbstractTest.checkFailed(AbstractTest.java:252)
+at commons.AbstractTest.verifyFalse(AbstractTest.java:262)
 at com.nopcommerce.users.Level_01_Register_Login.TC_02_Login(Level_01_Register_Login.java:114)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
@@ -1119,7 +332,6 @@ at org.testng.SuiteRunner.run(SuiteRunner.java:364)
 at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
 at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
 at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1204)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
 at org.testng.TestNG.runSuites(TestNG.java:1049)
 at org.testng.TestNG.run(TestNG.java:1017)
@@ -1138,8 +350,8 @@ at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertFalse(Assert.java:65)
 at org.testng.Assert.assertFalse(Assert.java:75)
-at commons.AbstractTest.checkFailed(AbstractTest.java:250)
-at commons.AbstractTest.verifyFalse(AbstractTest.java:260)
+at commons.AbstractTest.checkFailed(AbstractTest.java:252)
+at commons.AbstractTest.verifyFalse(AbstractTest.java:262)
 at com.nopcommerce.users.Level_01_Register_Login.TC_02_Login(Level_01_Register_Login.java:114)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
@@ -1160,7 +372,6 @@ at org.testng.SuiteRunner.run(SuiteRunner.java:364)
 at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
 at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
 at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1204)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
 at org.testng.TestNG.runSuites(TestNG.java:1049)
 at org.testng.TestNG.run(TestNG.java:1017)
@@ -1174,8 +385,8 @@ at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertFalse(Assert.java:65)
 at org.testng.Assert.assertFalse(Assert.java:75)
-at commons.AbstractTest.checkFailed(AbstractTest.java:250)
-at commons.AbstractTest.verifyFalse(AbstractTest.java:260)
+at commons.AbstractTest.checkFailed(AbstractTest.java:252)
+at commons.AbstractTest.verifyFalse(AbstractTest.java:262)
 at com.nopcommerce.users.Level_01_Register_Login.TC_02_Login(Level_01_Register_Login.java:117)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
@@ -1196,7 +407,6 @@ at org.testng.SuiteRunner.run(SuiteRunner.java:364)
 at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
 at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
 at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1204)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
 at org.testng.TestNG.runSuites(TestNG.java:1049)
 at org.testng.TestNG.run(TestNG.java:1017)
@@ -1208,40 +418,40 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.Throwable -->
           <reporter-output>
             <line>
-              <![CDATA[[INFO ] [2021-06-18 11:12:38,351] Login - Step 5: Verify My Account Link Displayed
+              <![CDATA[[INFO ] [2021-06-18 16:55:41,074] Login - Step 5: Verify My Account Link Displayed
 <br>]]>
             </line>
             <line>
-              <![CDATA[[INFO ] [2021-06-18 11:12:39,132]  -------------------------- PASSED -------------------------- 
+              <![CDATA[[INFO ] [2021-06-18 16:55:41,866]  -------------------------- PASSED -------------------------- 
 <br>]]>
             </line>
             <line>
-              <![CDATA[[INFO ] [2021-06-18 11:12:39,132] Login - Step 6: Verify Logout Link Displayed
+              <![CDATA[[INFO ] [2021-06-18 16:55:41,866] Login - Step 6: Verify Logout Link Displayed
 <br>]]>
             </line>
             <line>
-              <![CDATA[[INFO ] [2021-06-18 11:12:39,415]  -------------------------- FAILED -------------------------- 
+              <![CDATA[[INFO ] [2021-06-18 16:55:42,464]  -------------------------- FAILED -------------------------- 
 <br>]]>
             </line>
             <line>
-              <![CDATA[[INFO ] [2021-06-18 11:12:39,425] Login - Step 7: Verify Logout Link Displayed
+              <![CDATA[[INFO ] [2021-06-18 16:55:42,464] Login - Step 7: Verify Logout Link Displayed
 <br>]]>
             </line>
             <line>
-              <![CDATA[[INFO ] [2021-06-18 11:12:39,735]  -------------------------- FAILED -------------------------- 
+              <![CDATA[[INFO ] [2021-06-18 16:55:42,864]  -------------------------- FAILED -------------------------- 
 <br>]]>
             </line>
             <line>
-              <![CDATA[[INFO ] [2021-06-18 11:12:39,735] Login - Step 8: Verify Register Link Undisplayed
+              <![CDATA[[INFO ] [2021-06-18 16:55:42,864] Login - Step 8: Verify Register Link Undisplayed
 <br>]]>
             </line>
             <line>
-              <![CDATA[[INFO ] [2021-06-18 11:12:50,023]  -------------------------- PASSED -------------------------- 
+              <![CDATA[[INFO ] [2021-06-18 16:55:53,593]  -------------------------- PASSED -------------------------- 
 <br>]]>
             </line>
           </reporter-output>
         </test-method> <!-- TC_02_Login -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@6a1aab78]" name="afterClass" is-config="true" duration-ms="15822" started-at="2021-06-18T04:12:50Z" finished-at="2021-06-18T04:13:05Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@6e20b53a]" name="afterClass" is-config="true" duration-ms="8629" started-at="2021-06-18T09:55:54Z" finished-at="2021-06-18T09:56:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->

@@ -21,23 +21,25 @@ public class AbstractTest {
 	private WebDriver driver;
 	private String projectFolder = System.getProperty("user.dir");
 	private String osName = System.getProperty("os.name");
-protected final Log log;
-protected AbstractTest() {
-	
-	log= LogFactory.getLog(getClass());
-}
-protected WebDriver getBrowserDriver(String browserName) {
+	protected final Log log;
+
+	protected AbstractTest() {
+
+		log = LogFactory.getLog(getClass());
+	}
+
+	protected WebDriver getBrowserDriver(String browserName) {
 		// C1 de chay multi os
 		// setBrowserDriver();
 		// C2 :Dung WebDriverManager (
 		Browser browser = Browser.valueOf(browserName.toUpperCase());
-				
 
 		if (browser == Browser.FIREFOX_UI) {
 			// set geko driver
 
 			// WebDriverManager ( thu vien cua JAva): tu dong tai driver , tu dong set
-			// WebDriverManager.firefoxdriver().driverVersion("xxxxx").setup();( setup version, neu khong se tu tai ver moi nhat)
+			// WebDriverManager.firefoxdriver().driverVersion("xxxxx").setup();( setup
+			// version, neu khong se tu tai ver moi nhat)
 // hoac browserVersion("xxxxx")
 			// Property
 			WebDriverManager.firefoxdriver().setup();
@@ -87,20 +89,19 @@ protected WebDriver getBrowserDriver(String browserName) {
 
 		return driver;
 	}
-	
-	
-	protected WebDriver getBrowserDriver(String browserName,String url) {
+
+	protected WebDriver getBrowserDriver(String browserName, String url) {
 		// C1 de chay multi os
 		// setBrowserDriver();
 		// C2 :Dung WebDriverManager (
 		Browser browser = Browser.valueOf(browserName.toUpperCase());
-				
 
 		if (browser == Browser.FIREFOX_UI) {
 			// set geko driver
 
 			// WebDriverManager ( thu vien cua JAva): tu dong tai driver , tu dong set
-			// WebDriverManager.firefoxdriver().driverVersion("xxxxx").setup();( setup version, neu khong se tu tai ver moi nhat)
+			// WebDriverManager.firefoxdriver().driverVersion("xxxxx").setup();( setup
+			// version, neu khong se tu tai ver moi nhat)
 // hoac browserVersion("xxxxx")
 			// Property
 			WebDriverManager.firefoxdriver().setup();
@@ -216,6 +217,7 @@ protected WebDriver getBrowserDriver(String browserName) {
 	private boolean isSolaris() {
 		return (osName.toLowerCase().indexOf("sunos") >= 0);
 	}
+
 	private boolean checkTrue(boolean condition) {
 		boolean pass = true;
 		try {
@@ -276,5 +278,10 @@ protected WebDriver getBrowserDriver(String browserName) {
 
 	protected boolean verifyEquals(Object actual, Object expected) {
 		return checkEquals(actual, expected);
+	}
+
+	public WebDriver getDriver() {
+		// TODO Auto-generated method stub
+		return driver;
 	}
 }
