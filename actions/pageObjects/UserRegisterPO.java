@@ -89,7 +89,23 @@ public class UserRegisterPO extends AbstractPage {
 		waitToElementClickable(driver, UserRegisterPageUI.LOGOUT_LINK);
 		clickToElement(driver, UserRegisterPageUI.LOGOUT_LINK);
 		return PageGeneratorManager.getUserHomePage(driver);
-		
+
+	}
+
+	public String getFirstNameIsRequiredMessage() {
+		waitToElementVisible(driver, UserRegisterPageUI.FIRST_NAME_IS_REQUIRED);
+		return getElementText(driver, UserRegisterPageUI.FIRST_NAME_IS_REQUIRED);
+
+	}
+
+	public String getLastNameIsRequiredMessage() {
+		waitToElementVisible(driver, UserRegisterPageUI.LAST_NAME_IS_REQUIRED);
+		return getElementText(driver, UserRegisterPageUI.LAST_NAME_IS_REQUIRED);
+	}
+
+	public Object getPasswordIsRequiredMessage() {
+		waitToElementVisible(driver, UserRegisterPageUI.PASSWORD_IS_REQUIRED);
+		return getElementText(driver, UserRegisterPageUI.PASSWORD_IS_REQUIRED);
 	}
 
 }

@@ -6,19 +6,18 @@
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
     <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
     <listener class-name="reportConfig.ExtentReportListenerVer2"/>
-    <listener class-name="reportConfig.AllureTestListener"/>
   </listeners>
   <test thread-count="5" name="Run on FIREFOX UI(failed)">
     <parameter name="browser" value="firefox_ui"/>
+    <parameter name="url" value="https://demo.nopcommerce.com/"/>
     <classes>
-      <class name="com.nopcommerce.users.Level_01_Register_Login">
+      <class name="com.nopcommerce.users.User_01_Register">
         <methods>
           <include name="TC_01_Register"/>
-          <include name="TC_02_Login"/>
           <include name="afterClass"/>
           <include name="beforeClass"/>
         </methods>
-      </class> <!-- com.nopcommerce.users.Level_01_Register_Login -->
+      </class> <!-- com.nopcommerce.users.User_01_Register -->
     </classes>
   </test> <!-- Run on FIREFOX UI(failed) -->
 </suite> <!-- Failed suite [NopCommerce User] -->

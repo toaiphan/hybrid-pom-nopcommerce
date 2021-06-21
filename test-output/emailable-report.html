@@ -9,56 +9,19 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">NopCommerce User</th></tr>
-<tr><td><a href="#t0">Run on FIREFOX UI</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">112,441</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Run on FIREFOX UI</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">13,775</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">NopCommerce User</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Run on FIREFOX UI &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">com.nopcommerce.users.Level_01_Register_Login</td><td><a href="#m0">TC_01_Register</a></td><td rowspan="1">1624010101774</td><td rowspan="1">28209</td></tr><tr class="failedeven"><td><a href="#m1">TC_02_Login</a></td><td rowspan="1">1624010132440</td><td rowspan="1">21153</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">NopCommerce User</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Run on FIREFOX UI &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.nopcommerce.users.User_01_Register</td><td><a href="#m0">TC_01_Register_With_Empty_Data</a></td><td rowspan="1">1624284458808</td><td rowspan="1">2673</td></tr></tbody>
 </table>
-<h2>Run on FIREFOX UI</h2><h3 id="m0">com.nopcommerce.users.Level_01_Register_Login#TC_01_Register</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">[INFO ] [2021-06-18 16:55:02,706] Register - Step 01: Open Home Page
-<br><br/>[INFO ] [2021-06-18 16:55:21,484] Register - Step 10: Verify Registered Success Message
-<br><br/>[INFO ] [2021-06-18 16:55:21,725]  -------------------------- FAILED -------------------------- 
-<br><br/>[INFO ] [2021-06-18 16:55:21,750] Register - Step 11: Verify Registered Success Message
-<br><br/>[INFO ] [2021-06-18 16:55:23,075]  -------------------------- FAILED -------------------------- 
-<br><br/>[INFO ] [2021-06-18 16:55:23,076] Register - Step 12: Verify Registered Success Message
-<br><br/>[INFO ] [2021-06-18 16:55:23,465]  -------------------------- FAILED -------------------------- 
-<br></div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Multiple failures (3):
-Failure 1 of 3
-java.lang.AssertionError: expected [Your registration completedxx] but found [Your registration completed]
-	at commons.AbstractTest.checkEquals(AbstractTest.java:268)
-	at commons.AbstractTest.verifyEquals(AbstractTest.java:280)
-	at com.nopcommerce.users.Level_01_Register_Login.TC_01_Register(Level_01_Register_Login.java:92)
-
-Failure 2 of 3
-java.lang.AssertionError: expected [Your registration completedxxv] but found [Your registration completed]
-	at commons.AbstractTest.checkEquals(AbstractTest.java:268)
-	at commons.AbstractTest.verifyEquals(AbstractTest.java:280)
-	at com.nopcommerce.users.Level_01_Register_Login.TC_01_Register(Level_01_Register_Login.java:95)
-
-Failure 3 of 3
-java.lang.AssertionError: expected [Your registration completedxxvv] but found [Your registration completed]
-	at commons.AbstractTest.checkEquals(AbstractTest.java:268)
-	at commons.AbstractTest.verifyEquals(AbstractTest.java:280)
-	at com.nopcommerce.users.Level_01_Register_Login.TC_01_Register(Level_01_Register_Login.java:98)
-... Removed 90 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.nopcommerce.users.Level_01_Register_Login#TC_02_Login</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">[INFO ] [2021-06-18 16:55:41,074] Login - Step 5: Verify My Account Link Displayed
-<br><br/>[INFO ] [2021-06-18 16:55:41,866]  -------------------------- PASSED -------------------------- 
-<br><br/>[INFO ] [2021-06-18 16:55:41,866] Login - Step 6: Verify Logout Link Displayed
-<br><br/>[INFO ] [2021-06-18 16:55:42,464]  -------------------------- FAILED -------------------------- 
-<br><br/>[INFO ] [2021-06-18 16:55:42,464] Login - Step 7: Verify Logout Link Displayed
-<br><br/>[INFO ] [2021-06-18 16:55:42,864]  -------------------------- FAILED -------------------------- 
-<br><br/>[INFO ] [2021-06-18 16:55:42,864] Login - Step 8: Verify Register Link Undisplayed
-<br><br/>[INFO ] [2021-06-18 16:55:53,593]  -------------------------- PASSED -------------------------- 
-<br></div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Multiple failures (2):
-Failure 1 of 2
-java.lang.AssertionError: expected [false] but found [true]
-	at commons.AbstractTest.checkFailed(AbstractTest.java:252)
-	at commons.AbstractTest.verifyFalse(AbstractTest.java:262)
-	at com.nopcommerce.users.Level_01_Register_Login.TC_02_Login(Level_01_Register_Login.java:114)
-
-Failure 2 of 2
-java.lang.AssertionError: expected [false] but found [true]
-	at commons.AbstractTest.checkFailed(AbstractTest.java:252)
-	at commons.AbstractTest.verifyFalse(AbstractTest.java:262)
-	at com.nopcommerce.users.Level_01_Register_Login.TC_02_Login(Level_01_Register_Login.java:117)
-... Removed 58 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Run on FIREFOX UI</h2><h3 id="m0">com.nopcommerce.users.User_01_Register#TC_01_Register_With_Empty_Data</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">[INFO ] [2021-06-21 21:07:38,935] Register - Step 01: Open Home Page
+<br><br/>[INFO ] [2021-06-21 21:07:38,937] Register - Step 02: Click To Regiser Link
+<br><br/>[INFO ] [2021-06-21 21:07:40,870] Register - Step 03: Click To Regiser Link
+<br><br/>[INFO ] [2021-06-21 21:07:41,236] Register - Step 04: Verify Error Message (First name is required.)
+<br><br/>[INFO ] [2021-06-21 21:07:41,331]  -------------------------- PASSED -------------------------- 
+<br><br/>[INFO ] [2021-06-21 21:07:41,332] Register - Step 05: Verify Error Message (Last name is required.)
+<br><br/>[INFO ] [2021-06-21 21:07:41,415]  -------------------------- PASSED -------------------------- 
+<br><br/>[INFO ] [2021-06-21 21:07:41,416] Register - Step 06: Verify Error Message (Password is required.)
+<br><br/>[INFO ] [2021-06-21 21:07:41,481]  -------------------------- PASSED -------------------------- 
+<br></div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

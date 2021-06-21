@@ -1,461 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" ignored="0" total="2" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[[INFO ] [2021-06-18 16:55:02,706] Register - Step 01: Open Home Page
+      <![CDATA[[INFO ] [2021-06-21 21:07:38,935] Register - Step 01: Open Home Page
 <br>]]>
     </line>
     <line>
-      <![CDATA[[INFO ] [2021-06-18 16:55:21,484] Register - Step 10: Verify Registered Success Message
+      <![CDATA[[INFO ] [2021-06-21 21:07:38,937] Register - Step 02: Click To Regiser Link
 <br>]]>
     </line>
     <line>
-      <![CDATA[[INFO ] [2021-06-18 16:55:21,725]  -------------------------- FAILED -------------------------- 
+      <![CDATA[[INFO ] [2021-06-21 21:07:40,870] Register - Step 03: Click To Regiser Link
 <br>]]>
     </line>
     <line>
-      <![CDATA[[INFO ] [2021-06-18 16:55:21,750] Register - Step 11: Verify Registered Success Message
+      <![CDATA[[INFO ] [2021-06-21 21:07:41,236] Register - Step 04: Verify Error Message (First name is required.)
 <br>]]>
     </line>
     <line>
-      <![CDATA[[INFO ] [2021-06-18 16:55:23,075]  -------------------------- FAILED -------------------------- 
+      <![CDATA[[INFO ] [2021-06-21 21:07:41,331]  -------------------------- PASSED -------------------------- 
 <br>]]>
     </line>
     <line>
-      <![CDATA[[INFO ] [2021-06-18 16:55:23,076] Register - Step 12: Verify Registered Success Message
+      <![CDATA[[INFO ] [2021-06-21 21:07:41,332] Register - Step 05: Verify Error Message (Last name is required.)
 <br>]]>
     </line>
     <line>
-      <![CDATA[[INFO ] [2021-06-18 16:55:23,465]  -------------------------- FAILED -------------------------- 
+      <![CDATA[[INFO ] [2021-06-21 21:07:41,415]  -------------------------- PASSED -------------------------- 
 <br>]]>
     </line>
     <line>
-      <![CDATA[[INFO ] [2021-06-18 16:55:41,074] Login - Step 5: Verify My Account Link Displayed
+      <![CDATA[[INFO ] [2021-06-21 21:07:41,416] Register - Step 06: Verify Error Message (Password is required.)
 <br>]]>
     </line>
     <line>
-      <![CDATA[[INFO ] [2021-06-18 16:55:41,866]  -------------------------- PASSED -------------------------- 
-<br>]]>
-    </line>
-    <line>
-      <![CDATA[[INFO ] [2021-06-18 16:55:41,866] Login - Step 6: Verify Logout Link Displayed
-<br>]]>
-    </line>
-    <line>
-      <![CDATA[[INFO ] [2021-06-18 16:55:42,464]  -------------------------- FAILED -------------------------- 
-<br>]]>
-    </line>
-    <line>
-      <![CDATA[[INFO ] [2021-06-18 16:55:42,464] Login - Step 7: Verify Logout Link Displayed
-<br>]]>
-    </line>
-    <line>
-      <![CDATA[[INFO ] [2021-06-18 16:55:42,864]  -------------------------- FAILED -------------------------- 
-<br>]]>
-    </line>
-    <line>
-      <![CDATA[[INFO ] [2021-06-18 16:55:42,864] Login - Step 8: Verify Register Link Undisplayed
-<br>]]>
-    </line>
-    <line>
-      <![CDATA[[INFO ] [2021-06-18 16:55:53,593]  -------------------------- PASSED -------------------------- 
+      <![CDATA[[INFO ] [2021-06-21 21:07:41,481]  -------------------------- PASSED -------------------------- 
 <br>]]>
     </line>
   </reporter-output>
-  <suite name="NopCommerce User" duration-ms="112441" started-at="2021-06-18T09:54:11Z" finished-at="2021-06-18T09:56:03Z">
+  <suite name="NopCommerce User" duration-ms="13775" started-at="2021-06-21T14:07:29Z" finished-at="2021-06-21T14:07:42Z">
     <groups>
     </groups>
-    <test name="Run on FIREFOX UI" duration-ms="112441" started-at="2021-06-18T09:54:11Z" finished-at="2021-06-18T09:56:03Z">
-      <class name="com.nopcommerce.users.Level_01_Register_Login">
-        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@6e20b53a]" name="beforeClass" is-config="true" duration-ms="50452" started-at="2021-06-18T09:54:11Z" finished-at="2021-06-18T09:55:01Z">
+    <test name="Run on FIREFOX UI" duration-ms="13775" started-at="2021-06-21T14:07:29Z" finished-at="2021-06-21T14:07:42Z">
+      <class name="com.nopcommerce.users.User_01_Register">
+        <test-method status="PASS" signature="beforeClass(java.lang.String, java.lang.String)[pri:0, instance:com.nopcommerce.users.User_01_Register@8dbdac1]" name="beforeClass" is-config="true" duration-ms="9547" started-at="2021-06-21T14:07:29Z" finished-at="2021-06-21T14:07:38Z">
           <params>
             <param index="0">
               <value>
                 <![CDATA[firefox_ui]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://demo.nopcommerce.com/]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="FAIL" signature="TC_01_Register()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@6e20b53a]" name="TC_01_Register" duration-ms="28209" started-at="2021-06-18T09:55:01Z" finished-at="2021-06-18T09:55:29Z">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Multiple failures (3):
-Failure 1 of 3
-java.lang.AssertionError: expected [Your registration completedxx] but found [Your registration completed]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:442)
-at commons.AbstractTest.checkEquals(AbstractTest.java:268)
-at commons.AbstractTest.verifyEquals(AbstractTest.java:280)
-at com.nopcommerce.users.Level_01_Register_Login.TC_01_Register(Level_01_Register_Login.java:92)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-
-Failure 2 of 3
-java.lang.AssertionError: expected [Your registration completedxxv] but found [Your registration completed]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:442)
-at commons.AbstractTest.checkEquals(AbstractTest.java:268)
-at commons.AbstractTest.verifyEquals(AbstractTest.java:280)
-at com.nopcommerce.users.Level_01_Register_Login.TC_01_Register(Level_01_Register_Login.java:95)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-
-Failure 3 of 3
-java.lang.AssertionError: expected [Your registration completedxxvv] but found [Your registration completed]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Multiple failures (3):
-Failure 1 of 3
-java.lang.AssertionError: expected [Your registration completedxx] but found [Your registration completed]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:442)
-at commons.AbstractTest.checkEquals(AbstractTest.java:268)
-at commons.AbstractTest.verifyEquals(AbstractTest.java:280)
-at com.nopcommerce.users.Level_01_Register_Login.TC_01_Register(Level_01_Register_Login.java:92)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-
-Failure 2 of 3
-java.lang.AssertionError: expected [Your registration completedxxv] but found [Your registration completed]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:442)
-at commons.AbstractTest.checkEquals(AbstractTest.java:268)
-at commons.AbstractTest.verifyEquals(AbstractTest.java:280)
-at com.nopcommerce.users.Level_01_Register_Login.TC_01_Register(Level_01_Register_Login.java:95)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-
-Failure 3 of 3
-java.lang.AssertionError: expected [Your registration completedxxvv] but found [Your registration completed]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:442)
-at commons.AbstractTest.checkEquals(AbstractTest.java:268)
-at commons.AbstractTest.verifyEquals(AbstractTest.java:280)
-at com.nopcommerce.users.Level_01_Register_Login.TC_01_Register(Level_01_Register_Login.java:98)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+        <test-method status="PASS" signature="TC_01_Register_With_Empty_Data()[pri:0, instance:com.nopcommerce.users.User_01_Register@8dbdac1]" name="TC_01_Register_With_Empty_Data" duration-ms="2673" started-at="2021-06-21T14:07:38Z" finished-at="2021-06-21T14:07:41Z">
           <reporter-output>
             <line>
-              <![CDATA[[INFO ] [2021-06-18 16:55:02,706] Register - Step 01: Open Home Page
+              <![CDATA[[INFO ] [2021-06-21 21:07:38,935] Register - Step 01: Open Home Page
 <br>]]>
             </line>
             <line>
-              <![CDATA[[INFO ] [2021-06-18 16:55:21,484] Register - Step 10: Verify Registered Success Message
+              <![CDATA[[INFO ] [2021-06-21 21:07:38,937] Register - Step 02: Click To Regiser Link
 <br>]]>
             </line>
             <line>
-              <![CDATA[[INFO ] [2021-06-18 16:55:21,725]  -------------------------- FAILED -------------------------- 
+              <![CDATA[[INFO ] [2021-06-21 21:07:40,870] Register - Step 03: Click To Regiser Link
 <br>]]>
             </line>
             <line>
-              <![CDATA[[INFO ] [2021-06-18 16:55:21,750] Register - Step 11: Verify Registered Success Message
+              <![CDATA[[INFO ] [2021-06-21 21:07:41,236] Register - Step 04: Verify Error Message (First name is required.)
 <br>]]>
             </line>
             <line>
-              <![CDATA[[INFO ] [2021-06-18 16:55:23,075]  -------------------------- FAILED -------------------------- 
+              <![CDATA[[INFO ] [2021-06-21 21:07:41,331]  -------------------------- PASSED -------------------------- 
 <br>]]>
             </line>
             <line>
-              <![CDATA[[INFO ] [2021-06-18 16:55:23,076] Register - Step 12: Verify Registered Success Message
+              <![CDATA[[INFO ] [2021-06-21 21:07:41,332] Register - Step 05: Verify Error Message (Last name is required.)
 <br>]]>
             </line>
             <line>
-              <![CDATA[[INFO ] [2021-06-18 16:55:23,465]  -------------------------- FAILED -------------------------- 
+              <![CDATA[[INFO ] [2021-06-21 21:07:41,415]  -------------------------- PASSED -------------------------- 
+<br>]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-06-21 21:07:41,416] Register - Step 06: Verify Error Message (Password is required.)
+<br>]]>
+            </line>
+            <line>
+              <![CDATA[[INFO ] [2021-06-21 21:07:41,481]  -------------------------- PASSED -------------------------- 
 <br>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- TC_01_Register -->
-        <test-method status="FAIL" signature="TC_02_Login()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@6e20b53a]" name="TC_02_Login" duration-ms="21153" started-at="2021-06-18T09:55:32Z" finished-at="2021-06-18T09:55:53Z">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Multiple failures (2):
-Failure 1 of 2
-java.lang.AssertionError: expected [false] but found [true]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertFalse(Assert.java:65)
-at org.testng.Assert.assertFalse(Assert.java:75)
-at commons.AbstractTest.checkFailed(AbstractTest.java:252)
-at commons.AbstractTest.verifyFalse(AbstractTest.java:262)
-at com.nopcommerce.users.Level_01_Register_Login.TC_02_Login(Level_01_Register_Login.java:114)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-
-Failure 2 of 2
-java.lang.AssertionError: expected [false] but found [true]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Multiple failures (2):
-Failure 1 of 2
-java.lang.AssertionError: expected [false] but found [true]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertFalse(Assert.java:65)
-at org.testng.Assert.assertFalse(Assert.java:75)
-at commons.AbstractTest.checkFailed(AbstractTest.java:252)
-at commons.AbstractTest.verifyFalse(AbstractTest.java:262)
-at com.nopcommerce.users.Level_01_Register_Login.TC_02_Login(Level_01_Register_Login.java:114)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-
-Failure 2 of 2
-java.lang.AssertionError: expected [false] but found [true]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertFalse(Assert.java:65)
-at org.testng.Assert.assertFalse(Assert.java:75)
-at commons.AbstractTest.checkFailed(AbstractTest.java:252)
-at commons.AbstractTest.verifyFalse(AbstractTest.java:262)
-at com.nopcommerce.users.Level_01_Register_Login.TC_02_Login(Level_01_Register_Login.java:117)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-            <line>
-              <![CDATA[[INFO ] [2021-06-18 16:55:41,074] Login - Step 5: Verify My Account Link Displayed
-<br>]]>
-            </line>
-            <line>
-              <![CDATA[[INFO ] [2021-06-18 16:55:41,866]  -------------------------- PASSED -------------------------- 
-<br>]]>
-            </line>
-            <line>
-              <![CDATA[[INFO ] [2021-06-18 16:55:41,866] Login - Step 6: Verify Logout Link Displayed
-<br>]]>
-            </line>
-            <line>
-              <![CDATA[[INFO ] [2021-06-18 16:55:42,464]  -------------------------- FAILED -------------------------- 
-<br>]]>
-            </line>
-            <line>
-              <![CDATA[[INFO ] [2021-06-18 16:55:42,464] Login - Step 7: Verify Logout Link Displayed
-<br>]]>
-            </line>
-            <line>
-              <![CDATA[[INFO ] [2021-06-18 16:55:42,864]  -------------------------- FAILED -------------------------- 
-<br>]]>
-            </line>
-            <line>
-              <![CDATA[[INFO ] [2021-06-18 16:55:42,864] Login - Step 8: Verify Register Link Undisplayed
-<br>]]>
-            </line>
-            <line>
-              <![CDATA[[INFO ] [2021-06-18 16:55:53,593]  -------------------------- PASSED -------------------------- 
-<br>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- TC_02_Login -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.nopcommerce.users.Level_01_Register_Login@6e20b53a]" name="afterClass" is-config="true" duration-ms="8629" started-at="2021-06-18T09:55:54Z" finished-at="2021-06-18T09:56:03Z">
+        </test-method> <!-- TC_01_Register_With_Empty_Data -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.nopcommerce.users.User_01_Register@8dbdac1]" name="afterClass" is-config="true" duration-ms="1337" started-at="2021-06-21T14:07:41Z" finished-at="2021-06-21T14:07:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.nopcommerce.users.Level_01_Register_Login -->
+      </class> <!-- com.nopcommerce.users.User_01_Register -->
     </test> <!-- Run on FIREFOX UI -->
   </suite> <!-- NopCommerce User -->
 </testng-results>

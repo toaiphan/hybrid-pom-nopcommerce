@@ -67,3 +67,71 @@
 [INFO ] [2021-06-18 11:12:39,735]  -------------------------- FAILED -------------------------- 
 [INFO ] [2021-06-18 11:12:39,735] Login - Step 8: Verify Register Link Undisplayed
 [INFO ] [2021-06-18 11:12:50,023]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-18 16:12:16,109] Register - Step 01: Open Home Page
+[INFO ] [2021-06-18 16:12:27,205] Register - Step 10: Verify Registered Success Message
+[INFO ] [2021-06-18 16:12:27,515]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 16:12:27,520] Register - Step 11: Verify Registered Success Message
+[INFO ] [2021-06-18 16:12:27,737]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 16:12:27,737] Register - Step 12: Verify Registered Success Message
+[INFO ] [2021-06-18 16:12:27,910]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 16:12:38,301] Login - Step 5: Verify My Account Link Displayed
+[INFO ] [2021-06-18 16:12:38,731]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-18 16:12:38,731] Login - Step 6: Verify Logout Link Displayed
+[INFO ] [2021-06-18 16:12:39,097]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 16:12:39,097] Login - Step 7: Verify Logout Link Displayed
+[INFO ] [2021-06-18 16:12:39,312]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 16:12:39,313] Login - Step 8: Verify Register Link Undisplayed
+[INFO ] [2021-06-18 16:12:49,480]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-18 16:55:02,706] Register - Step 01: Open Home Page
+[INFO ] [2021-06-18 16:55:21,484] Register - Step 10: Verify Registered Success Message
+[INFO ] [2021-06-18 16:55:21,725]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 16:55:21,750] Register - Step 11: Verify Registered Success Message
+[INFO ] [2021-06-18 16:55:23,075]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 16:55:23,076] Register - Step 12: Verify Registered Success Message
+[INFO ] [2021-06-18 16:55:23,465]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 16:55:41,074] Login - Step 5: Verify My Account Link Displayed
+[INFO ] [2021-06-18 16:55:41,866]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-18 16:55:41,866] Login - Step 6: Verify Logout Link Displayed
+[INFO ] [2021-06-18 16:55:42,464]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 16:55:42,464] Login - Step 7: Verify Logout Link Displayed
+[INFO ] [2021-06-18 16:55:42,864]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-18 16:55:42,864] Login - Step 8: Verify Register Link Undisplayed
+[INFO ] [2021-06-18 16:55:53,593]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-21 20:16:34,807] Register - Step 01: Open Home Page
+[INFO ] [2021-06-21 20:16:41,080] Register - Step 10: Verify Registered Success Message
+[INFO ] [2021-06-21 20:16:41,170]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-21 20:16:41,172] Register - Step 11: Verify Registered Success Message
+[INFO ] [2021-06-21 20:16:41,251]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-21 20:16:41,251] Register - Step 12: Verify Registered Success Message
+[INFO ] [2021-06-21 20:16:41,324]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-21 20:29:21,128] Register - Step 01: Open Home Page
+[INFO ] [2021-06-21 20:29:27,070] Register - Step 10: Verify Registered Success Message
+[INFO ] [2021-06-21 20:29:27,158]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-21 20:29:27,160] Register - Step 11: Verify Registered Success Message
+[INFO ] [2021-06-21 20:29:27,227]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-21 20:29:27,227] Register - Step 12: Verify Registered Success Message
+[INFO ] [2021-06-21 20:29:27,292]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-06-21 20:52:08,530] Register - Step 01: Open Home Page
+[INFO ] [2021-06-21 20:52:08,534] Register - Step 02: Click To Regiser Link
+[INFO ] [2021-06-21 20:52:10,267] Register - Step 03: Click To Regiser Link
+[INFO ] [2021-06-21 21:01:55,102] Register - Step 01: Open Home Page
+[INFO ] [2021-06-21 21:01:55,106] Register - Step 02: Click To Regiser Link
+[INFO ] [2021-06-21 21:01:56,934] Register - Step 03: Click To Regiser Link
+[INFO ] [2021-06-21 21:01:57,328] Register - Step 04: Verify Error Message (First name is required.)
+[INFO ] [2021-06-21 21:01:57,430]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-21 21:04:57,486] Register - Step 01: Open Home Page
+[INFO ] [2021-06-21 21:04:57,490] Register - Step 02: Click To Regiser Link
+[INFO ] [2021-06-21 21:04:59,183] Register - Step 03: Click To Regiser Link
+[INFO ] [2021-06-21 21:04:59,546] Register - Step 04: Verify Error Message (First name is required.)
+[INFO ] [2021-06-21 21:04:59,645]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-21 21:04:59,645] Register - Step 05: Verify Error Message (Last name is required.)
+[INFO ] [2021-06-21 21:04:59,743]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-21 21:07:38,935] Register - Step 01: Open Home Page
+[INFO ] [2021-06-21 21:07:38,937] Register - Step 02: Click To Regiser Link
+[INFO ] [2021-06-21 21:07:40,870] Register - Step 03: Click To Regiser Link
+[INFO ] [2021-06-21 21:07:41,236] Register - Step 04: Verify Error Message (First name is required.)
+[INFO ] [2021-06-21 21:07:41,331]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-21 21:07:41,332] Register - Step 05: Verify Error Message (Last name is required.)
+[INFO ] [2021-06-21 21:07:41,415]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-06-21 21:07:41,416] Register - Step 06: Verify Error Message (Password is required.)
+[INFO ] [2021-06-21 21:07:41,481]  -------------------------- PASSED -------------------------- 

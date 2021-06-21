@@ -18,6 +18,10 @@ public class UserRegisterPageUI {
 	public static final String REGISTER_BUTTON = "//button[@id='register-button']";
 	public static final String REGISTERED_SUCCESS_MESSAGE = "//div[@class='result']";
 	public static final String LOGOUT_LINK = "//a[@class='ico-logout']";
+	public static final String FIRST_NAME_IS_REQUIRED = "//span[@id='FirstName-error']";
+	public static final String LAST_NAME_IS_REQUIRED = "//span[@id='LastName-error']";
+	public static final String PASSWORD_IS_REQUIRED = "//span[@id='ConfirmPassword-error']";
+
 
 	
 }

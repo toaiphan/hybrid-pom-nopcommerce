@@ -1,8 +1,6 @@
 package com.nopcommerce.users;
 
 import org.testng.annotations.Test;
-
-import commons.AbstractPage;
 import commons.AbstractTest;
 import pageObjects.UserAddressPO;
 import pageObjects.UserCustomerInforPO;
@@ -14,53 +12,27 @@ import pageObjects.PageGeneratorManager;
 import pageObjects.UserRegisterPO;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
-
-import java.util.Random;
-import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
-//
-//--------------------------------Các bước viết script dạng Page Object Pattern-----------------------------//
-//1. Tạo các pageObject class ( chưa viết gì)
-//2. Tạo các pageUI Class ( viết các locator trong đó)
-//3. Viết các hàm giả trong testcase
-//4. Từ các hàm giả tạo hàm và viết các hàm trong pageObject class (TDD Test-Driven-Development )
-//DRY : Dont repeat yourself : lap lai nhieu se mat nhieu thoi gian maintain
 
-//--------------------fake data:mockaroo.com--------------------------//
-//--------------------Cloud testing service-------------------------//
-//Browser stack, Saucelab, Device farm(Amazone).. Dung de chay tren da dang he dieu hanh+ Webbrowser+ Version
-
-//--------------------Selenium architect-------------------------//
-//tester viet code bằng ngôn ngữ lập trình :Java,python,C#... ==compile ra ngôn ngữ máy(file.class)==> máy tính
-//=== protocol(Json wire)===> driver === http/s===>browsers
-
-//-------------------- neu load trang lau, bi fail ,co the dung JS topic 38 (9h12p goc window)------ hoac bo info vi che nut logout-//
-public class Level_01_Register_Login extends AbstractTest {
-	// Khai bao projectFolder
-
-	// khai bao driver
+public class User_01_Example extends AbstractTest {
 	WebDriver driver;
-
-	// khai bao bien select cho dropdown
+	UserHomePO homePage;
+	UserLoginPO loginPage;
+	UserCustomerInforPO customerInfoPage;
+	UserRegisterPO registerPage;
+	UserAddressPO addressPage;
+	UserMyProductReviewPO myProductReviewPage;
+	UserOdersPagePO odersPagePage;
 	Select select;
-
-	// Khai bao firstname,lastname,email,companyName,password;
 	String firstname, lastname, email, companyName, password;
 
-	@Parameters("browser")
+	@Parameters(value = { "browser", "url" })
 	@BeforeClass
-	public void beforeClass(String browserName) {
-		driver = getBrowserDriver(browserName);
-
-		// tao bo du lieu (email se +4 so random)
+	public void beforeClass(String browserName, String url) {
+		driver = getBrowserDriver(browserName, url);
 		firstname = "phan";
 		lastname = "toai";
 		email = "toaiphan" + getRandomNumber() + "@gmail.com";
@@ -68,12 +40,9 @@ public class Level_01_Register_Login extends AbstractTest {
 		password = "123456";
 	}
 
-	@Test
 	public void TC_01_Register() {
 		log.info("Register - Step 01: Open Home Page");
 		homePage = PageGeneratorManager.getUserHomePage(driver);
-		
-		// switch page( dam bao tinh dong goi, cac page co su lien ket voi nhau)
 		registerPage = homePage.clickToRegisterLink();
 		registerPage.clickToGenderMaleRadioButton();
 		registerPage.inputToFirstNameTextbox(firstname);
@@ -86,42 +55,38 @@ public class Level_01_Register_Login extends AbstractTest {
 		registerPage.inputToPasswordTextbox(password);
 		registerPage.inputToConfirmPasswordTextbox(password);
 		registerPage.clickToRegisterButton();
-		//Assert.assertEquals(registerPage.getRegisteredSuccessMessage(), "Your registration completed");
-		// co tinh cho fail
 		log.info("Register - Step 10: Verify Registered Success Message");
 		verifyEquals(registerPage.getRegisteredSuccessMessage(), "Your registration completedxx");
-		
+
 		log.info("Register - Step 11: Verify Registered Success Message");
 		verifyEquals(registerPage.getRegisteredSuccessMessage(), "Your registration completedxxv");
-		
+
 		log.info("Register - Step 12: Verify Registered Success Message");
 		verifyEquals(registerPage.getRegisteredSuccessMessage(), "Your registration completedxxvv");
 		homePage = registerPage.clickToLogoutLink();
 
 	}
 
-	@Test
 	public void TC_02_Login() {
 		loginPage = homePage.clickToLoginLink();
 		loginPage.inputToEmailTextbox(email);
 		loginPage.inputToPasswordTextbox(password);
 		homePage = loginPage.clickToLoginButton();
-		
+
 		log.info("Login - Step 5: Verify My Account Link Displayed");
 		verifyTrue(homePage.isMyAccountLinkDisplayed());
-		
+
 		log.info("Login - Step 6: Verify Logout Link Displayed");
 		verifyFalse(homePage.isLogoutLinkDisplayed());
-		
+
 		log.info("Login - Step 7: Verify Logout Link Displayed");
 		verifyFalse(homePage.isLogoutLinkDisplayed());
-		
+
 		log.info("Login - Step 8: Verify Register Link Undisplayed");
 		verifyTrue(homePage.isRegisterLinkUndisplayed());
 
 	}
 
-	// @Test
 	public void TC_03_View_My_Account() {
 		customerInfoPage = homePage.clickToMyAccountLink();
 		Assert.assertTrue(customerInfoPage.isGenderMaleRadioButtonSelected());
@@ -143,8 +108,6 @@ public class Level_01_Register_Login extends AbstractTest {
 //		myProductReviewPage = (MyProductReviewPageObject) customerInfoPage.openLinkByPageName(driver,
 //				"My product reviews");
 //	}
-
-	// @Test
 	public void TC_04_Switch_Page_Solution_2() {
 		customerInfoPage.openLinkByPageName(driver, "Addresses");
 		addressPage = PageGeneratorManager.getUserAddressesPage(driver);
@@ -161,11 +124,4 @@ public class Level_01_Register_Login extends AbstractTest {
 
 	}
 
-	UserHomePO homePage;
-	UserLoginPO loginPage;
-	UserCustomerInforPO customerInfoPage;
-	UserRegisterPO registerPage;
-	UserAddressPO addressPage;
-	UserMyProductReviewPO myProductReviewPage;
-	UserOdersPagePO odersPagePage;
 }
