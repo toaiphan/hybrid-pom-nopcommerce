@@ -41,6 +41,7 @@ public class User_01_Register extends AbstractTest {
 		day = "8";
 		month = "June";
 		year = "1995";
+		
 	}
 
 	@Test
