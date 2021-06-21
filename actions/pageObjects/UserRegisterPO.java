@@ -103,9 +103,14 @@ public class UserRegisterPO extends AbstractPage {
 		return getElementText(driver, UserRegisterPageUI.LAST_NAME_IS_REQUIRED);
 	}
 
-	public Object getPasswordIsRequiredMessage() {
+	public String getPasswordIsRequiredMessage() {
 		waitToElementVisible(driver, UserRegisterPageUI.PASSWORD_IS_REQUIRED);
 		return getElementText(driver, UserRegisterPageUI.PASSWORD_IS_REQUIRED);
+	}
+
+	public String getWrongEmailMessage() {
+		waitToElementVisible(driver, UserRegisterPageUI.WRONG_EMAIL);
+		return getElementText(driver, UserRegisterPageUI.WRONG_EMAIL);
 	}
 
 }

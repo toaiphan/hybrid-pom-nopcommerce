@@ -21,7 +21,7 @@ public class UserRegisterPageUI {
 	public static final String FIRST_NAME_IS_REQUIRED = "//span[@id='FirstName-error']";
 	public static final String LAST_NAME_IS_REQUIRED = "//span[@id='LastName-error']";
 	public static final String PASSWORD_IS_REQUIRED = "//span[@id='ConfirmPassword-error']";
-
+	public static final String WRONG_EMAIL = "//span[@id='Email-error']";
 
 	
 }
