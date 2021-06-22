@@ -3,6 +3,7 @@ package com.nopcommerce.users;
 import commons.AbstractTest;
 import pageObjects.PageGeneratorManager;
 import pageObjects.UserAddressPO;
+import pageObjects.UserChangePasswordPO;
 import pageObjects.UserCustomerInforPO;
 import pageObjects.UserHomePO;
 import pageObjects.UserLoginPO;
@@ -25,9 +26,10 @@ public class User_03_My_Account extends AbstractTest {
 	UserAddressPO addressPage;
 	UserMyProductReviewPO myProductReviewPage;
 	UserOdersPagePO odersPagePage;
+	UserChangePasswordPO changePasswordPage;
 	Select select;
 	String firstName, lastName, day, month, year, companyName, email, password, invalidEmail, notMatchPassword, country,
-			state, city, address1, address2, zip, phone, fax;
+			state, city, address1, address2, zip, phone, fax, newPassword;
 
 	@Parameters(value = { "browser", "url" })
 	@BeforeClass
@@ -35,6 +37,8 @@ public class User_03_My_Account extends AbstractTest {
 		driver = getBrowserDriver(browserName, url);
 		email = "hahang" + getRandomNumber() + "@gmail.com";
 		password = "123456";
+		newPassword = "1234567";
+
 		firstName = "Hang";
 		lastName = "Ha";
 		day = "15";
@@ -87,8 +91,8 @@ public class User_03_My_Account extends AbstractTest {
 		log.info("TC_01_Update_Customer_Info - Step 07: Select Year Of Birth");
 		customerInfoPage.selectYearDropdown(year);
 
-		log.info("TC_01_Update_Customer_Info - Step 08: Input New Email ");
-		customerInfoPage.inputToEmailTextbox(email);
+		log.info("TC_01_Update_Customer_Info - Step 08: Input Email ");
+		customerInfoPage.inputToEmailTextbox(Common_01_RegisterToSystem.USERNAME);
 
 		log.info("TC_01_Update_Customer_Info - Step 09: Input New Company Name");
 		customerInfoPage.inputToCompanyTextbox(companyName);
@@ -115,7 +119,7 @@ public class User_03_My_Account extends AbstractTest {
 		verifyEquals(customerInfoPage.getSelectedTextInYearDropdown(), year);
 
 		log.info("TC_01_Update_Customer_Info - Step 17: Verify Email Updated");
-		verifyEquals(customerInfoPage.getEmailTextboxValue(), email);
+		verifyEquals(customerInfoPage.getEmailTextboxValue(), Common_01_RegisterToSystem.USERNAME);
 
 		log.info("TC_01_Update_Customer_Info - Step 18: Verify Company Name");
 		verifyEquals(customerInfoPage.getCompanyTextboxValue(), companyName);
@@ -127,10 +131,10 @@ public class User_03_My_Account extends AbstractTest {
 		log.info("TC_02_Add_New_Address - Step 01: Click To Addresses ");
 		customerInfoPage.openLinkWithPageName(driver, "Addresses");
 		addressPage = PageGeneratorManager.getUserAddressesPage(driver);
-		
+
 		log.info("TC_02_Add_New_Address - Step 02: Click To Add New ");
 		addressPage.clickToAddNewButton();
-		
+
 		log.info("TC_02_Add_New_Address - Step 03: Input FirstName ");
 		addressPage.inputToFirstNameTextbox(firstName);
 
@@ -138,10 +142,10 @@ public class User_03_My_Account extends AbstractTest {
 		addressPage.inputToLastNameTextbox(lastName);
 
 		log.info("TC_02_Add_New_Address - Step 05: Input Email ");
-		addressPage.inputToEmailTextbox(email);
+		addressPage.inputToEmailTextbox(Common_01_RegisterToSystem.USERNAME);
 
 		log.info("TC_02_Add_New_Address - Step 06: Input Company ");
-		addressPage.inputToCompanyTextbox("companyName");
+		addressPage.inputToCompanyTextbox(companyName);
 
 		log.info("TC_02_Add_New_Address - Step 07: Select Country ");
 		addressPage.selectCountryDropdown(country);
@@ -169,6 +173,87 @@ public class User_03_My_Account extends AbstractTest {
 
 		log.info("TC_02_Add_New_Address - Step 15: Click To Save");
 		addressPage.clickToSaveButton();
+
+		log.info("TC_02_Add_New_Address - Step 16: Verify Name");
+		verifyEquals(addressPage.getNameText(), firstName + " " + lastName);
+
+		log.info("TC_02_Add_New_Address - Step 17: Verify Email");
+		verifyEquals(addressPage.getEmailText(), "Email: " + Common_01_RegisterToSystem.USERNAME);
+
+		log.info("TC_02_Add_New_Address - Step 18: Verify Phone");
+		verifyEquals(addressPage.getPhoneText(), "Phone number: " + phone);
+
+		log.info("TC_02_Add_New_Address - Step 19: Verify Fax");
+		verifyEquals(addressPage.getFaxText(), "Fax number: " + fax);
+
+		log.info("TC_02_Add_New_Address - Step 20: Verify Company");
+		verifyEquals(addressPage.getCompanyText(), companyName);
+
+		log.info("TC_02_Add_New_Address - Step 21: Verify Address1");
+		verifyEquals(addressPage.getAddress1Text(), address1);
+
+		log.info("TC_02_Add_New_Address - Step 22: Verify Address2");
+		verifyEquals(addressPage.getAddress2Text(), address2);
+
+		log.info("TC_02_Add_New_Address - Step 23: Verify City State Zip");
+		verifyEquals(addressPage.getCityStateZipText(), city + ", " + state + ", " + zip);
+
+		log.info("TC_02_Add_New_Address - Step 24: Verify Country");
+		verifyEquals(addressPage.getCountryText(), country);
+
+	}
+
+	@Test
+	public void TC_03_Change_Password() {
+
+		log.info("TC_03_Change_Password - Step 01: Click To Change Password");
+		addressPage.openLinkWithPageName(driver, "Change password");
+		changePasswordPage = PageGeneratorManager.getUserChangePasswordPage(driver);
+
+		log.info("TC_03_Change_Password - Step 02: Input Old Password ");
+		changePasswordPage.inputToOldPasswordTextbox(Common_01_RegisterToSystem.PASSWORD);
+
+		log.info("TC_03_Change_Password - Step 03: Input New Password");
+		changePasswordPage.inputToNewPasswordTextbox(newPassword);
+
+		log.info("TC_03_Change_Password - Step 04: Input Confirm Password");
+		changePasswordPage.inputToConfirmPasswordTextbox(newPassword);
+
+		log.info("TC_03_Change_Password - Step 05: Click Change Password");
+		changePasswordPage.clickToChangePasswordButton();
+
+		log.info("TC_03_Change_Password - Step 06: Click Close Popup Password Was Changed");
+		changePasswordPage.clickToClosePopupButton();
+
+		log.info("TC_03_Change_Password - Step 07: Click Logout");
+		homePage = changePasswordPage.clickToLogoutButton();
+
+		log.info("TC_03_Change_Password - Step 08: Click Login");
+		loginPage = homePage.clickToLoginLink();
+
+		log.info("TC_03_Change_Password - Step 09: Input Email");
+		loginPage.inputToEmailTextbox(Common_01_RegisterToSystem.USERNAME);
+
+		log.info("TC_03_Change_Password - Step 10: Input Old Password");
+		loginPage.inputToPasswordTextbox(Common_01_RegisterToSystem.PASSWORD);
+
+		log.info("TC_03_Change_Password - Step 11: Click Login");
+		loginPage.clickToLoginButton();
+
+		log.info("TC_03_Change_Password - Step 12: Verify Error Message ");
+		verifyEquals(loginPage.getCredentialIncorrectMessage(), "The credentials provided are incorrect");
+
+		log.info("TC_03_Change_Password - Step 13: Input Email");
+		loginPage.inputToEmailTextbox(Common_01_RegisterToSystem.USERNAME);
+
+		log.info("TC_03_Change_Password - Step 14: Input New Password");
+		loginPage.inputToPasswordTextbox(newPassword);
+
+		log.info("TC_03_Change_Password - Step 15: Click Login");
+		homePage = loginPage.clickToLoginButton();
+
+		log.info("TC_03_Change_Password - Step 16: Verify Login Susscess");
+		verifyTrue(homePage.isMyAccountLinkDisplayed());
 
 	}
 

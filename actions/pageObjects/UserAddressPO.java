@@ -84,7 +84,52 @@ public class UserAddressPO extends AbstractPage {
 
 	public void clickToAddNewButton() {
 		waitToElementClickable(driver, UserAddressPageUI.ADD_NEW_BUTTON);
-		clickToElement(driver, UserAddressPageUI.ADD_NEW_BUTTON);		
+		clickToElement(driver, UserAddressPageUI.ADD_NEW_BUTTON);
+	}
+
+	public String getNameText() {
+		waitToElementVisible(driver, UserAddressPageUI.FIRST_LASTNAME_TEXT);
+		return getElementText(driver, UserAddressPageUI.FIRST_LASTNAME_TEXT);
+	}
+
+	public String getEmailText() {
+		waitToElementVisible(driver, UserAddressPageUI.EMAIL_TEXT);
+		return getElementText(driver, UserAddressPageUI.EMAIL_TEXT);
+	}
+
+	public String getPhoneText() {
+		waitToElementVisible(driver, UserAddressPageUI.PHONE_TEXT);
+		return getElementText(driver, UserAddressPageUI.PHONE_TEXT);
+	}
+
+	public String getFaxText() {
+		waitToElementVisible(driver, UserAddressPageUI.FAX_TEXT);
+		return getElementText(driver, UserAddressPageUI.FAX_TEXT);
+	}
+
+	public String getCompanyText() {
+		waitToElementVisible(driver, UserAddressPageUI.COMPANY_TEXT);
+		return getElementText(driver, UserAddressPageUI.COMPANY_TEXT);
+	}
+
+	public String getAddress1Text() {
+		waitToElementVisible(driver, UserAddressPageUI.ADDRESS1_TEXT);
+		return getElementText(driver, UserAddressPageUI.ADDRESS1_TEXT);
+	}
+
+	public String getAddress2Text() {
+		waitToElementVisible(driver, UserAddressPageUI.ADDRESS2_TEXT);
+		return getElementText(driver, UserAddressPageUI.ADDRESS2_TEXT);
+	}
+
+	public String getCityStateZipText() {
+		waitToElementVisible(driver, UserAddressPageUI.CITY_STATE_ZIP_TEXT);
+		return getElementText(driver, UserAddressPageUI.CITY_STATE_ZIP_TEXT);
+	}
+
+	public String getCountryText() {
+		waitToElementVisible(driver, UserAddressPageUI.COUNTRY_TEXT);
+		return getElementText(driver, UserAddressPageUI.COUNTRY_TEXT);
 	}
 
 }

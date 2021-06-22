@@ -29,6 +29,11 @@ public class PageGeneratorManager {
 		return new UserAddressPO(driver);
 
 	}
+	
+	public static UserChangePasswordPO getUserChangePasswordPage(WebDriver driver) {
+		return new UserChangePasswordPO(driver);
+
+	}
 
 	public static UserMyProductReviewPO getUserMyProductReviewPage(WebDriver driver) {
 		// TODO Auto-generated method stub

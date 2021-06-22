@@ -8,5 +8,4 @@ public class UserLoginPageUI {
 	public static final String NO_ACCOUNT_FOUND_MESSAGE = "//li[contains(text(),'No customer account found')]";
 	public static final String CREDENTIALS_PROVIDED_ARE_INCORRECT_MESSAGE = "//li[contains(text(),'The credentials provided are incorrect')]";
 
-
 }
