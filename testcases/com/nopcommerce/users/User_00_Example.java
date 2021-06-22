@@ -17,7 +17,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
-public class User_01_Example extends AbstractTest {
+public class User_00_Example extends AbstractTest {
 	WebDriver driver;
 	UserHomePO homePage;
 	UserLoginPO loginPage;

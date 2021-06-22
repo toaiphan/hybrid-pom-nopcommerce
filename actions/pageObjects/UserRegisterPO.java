@@ -113,4 +113,31 @@ public class UserRegisterPO extends AbstractPage {
 		return getElementText(driver, UserRegisterPageUI.WRONG_EMAIL);
 	}
 
+	public String getEmailExistMessage() {
+		waitToElementVisible(driver, UserRegisterPageUI.EMAIL_EXIST_MESSAGE);
+		return getElementText(driver, UserRegisterPageUI.EMAIL_EXIST_MESSAGE);
+	}
+
+	public String getInvalidPassWordMessage() {
+		waitToElementVisible(driver, UserRegisterPageUI.INVALID_PASSWORD_MESSAGE);
+		return getElementText(driver, UserRegisterPageUI.INVALID_PASSWORD_MESSAGE);
+	}
+
+	public String getConfirmPasswordErrorMessage() {
+		// TODO Auto-generated method stub
+		waitToElementVisible(driver, UserRegisterPageUI.CONFIRM_PASSWORD_ERROR_MESSAGE);
+		return getElementText(driver, UserRegisterPageUI.CONFIRM_PASSWORD_ERROR_MESSAGE);
+	}
+
+
+	public String getUserInformation(String email) {
+		// TODO Auto-generated method stub
+		return email;
+	}
+
+	public String getPasswordInformation(String password) {
+		// TODO Auto-generated method stub
+		return password;
+	}
+
 }

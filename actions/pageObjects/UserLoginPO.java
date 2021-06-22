@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import commons.AbstractPage;
 import pageUIs.UserLoginPageUI;
+import pageUIs.UserRegisterPageUI;
 
 public class UserLoginPO extends AbstractPage {
 	WebDriver driver;
@@ -34,6 +35,22 @@ public class UserLoginPO extends AbstractPage {
 		return PageGeneratorManager.getUserHomePage(driver);
 
 		
+	}
+
+	public String getEmailErrorMessage() {
+		waitToElementVisible(driver, UserLoginPageUI.EMAIL_ERROR_MESSAGE);
+		return getElementText(driver, UserLoginPageUI.EMAIL_ERROR_MESSAGE);
+	}
+
+	public String getNoAccountFoundMessage() {
+		waitToElementVisible(driver, UserLoginPageUI.NO_ACCOUNT_FOUND_MESSAGE);
+		return getElementText(driver, UserLoginPageUI.NO_ACCOUNT_FOUND_MESSAGE);
+	}
+
+	public String getCredentialIncorrectMessage() {
+		// TODO Auto-generated method stub
+		waitToElementVisible(driver, UserLoginPageUI.CREDENTIALS_PROVIDED_ARE_INCORRECT_MESSAGE);
+		return getElementText(driver, UserLoginPageUI.CREDENTIALS_PROVIDED_ARE_INCORRECT_MESSAGE);
 	}
 
 }

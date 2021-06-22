@@ -22,6 +22,10 @@ public class UserRegisterPageUI {
 	public static final String LAST_NAME_IS_REQUIRED = "//span[@id='LastName-error']";
 	public static final String PASSWORD_IS_REQUIRED = "//span[@id='ConfirmPassword-error']";
 	public static final String WRONG_EMAIL = "//span[@id='Email-error']";
+	public static final String EMAIL_EXIST_MESSAGE = "//li[contains(text(),'The specified email already exists')]";
+	public static final String INVALID_PASSWORD_MESSAGE = "//li[contains(text(),'must have at least 6 characters')]";
+	public static final String CONFIRM_PASSWORD_ERROR_MESSAGE = "//span[@id='ConfirmPassword-error']";
 
 	
+
 }
