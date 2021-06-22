@@ -63,6 +63,57 @@ public class UserCustomerInforPO extends AbstractPage {
 		return isElementSelected(driver, UserCustomerInforPageUI.NEWSLETTER_TEXTBOX);
 	}
 
+	public void clickToFamaleRadioButton() {
+		waitToElementClickable(driver, UserCustomerInforPageUI.GENDER_FAMALE_RADIO);
+		clickToElement(driver, UserCustomerInforPageUI.GENDER_FAMALE_RADIO);
+	}
 
+	public void inputToFirstNameTextbox(String firstName) {
+		waitToElementVisible(driver, UserCustomerInforPageUI.FIRSTNAME_TEXTBOX);
+		sendKeyToElement(driver, UserCustomerInforPageUI.FIRSTNAME_TEXTBOX, firstName);
+
+	}
+
+	public void inputToLastNameTextbox(String lastName) {
+		waitToElementVisible(driver, UserCustomerInforPageUI.LASTNAME_TEXTBOX);
+		sendKeyToElement(driver, UserCustomerInforPageUI.LASTNAME_TEXTBOX, lastName);
+
+	}
+
+	public void selectDayDropdown(String day) {
+		waitToElementClickable(driver, UserCustomerInforPageUI.DAY_DROPDOWN);
+		selectItemInDropdown(driver, UserCustomerInforPageUI.DAY_DROPDOWN, day);
+	}
+
+	public void selectMonthDropdown(String month) {
+		waitToElementClickable(driver, UserCustomerInforPageUI.MONTH_DROPDOWN);
+		selectItemInDropdown(driver, UserCustomerInforPageUI.MONTH_DROPDOWN, month);
+	}
+
+	public void selectYearDropdown(String year) {
+		waitToElementClickable(driver, UserCustomerInforPageUI.YEAR_DROPDOWN);
+		selectItemInDropdown(driver, UserCustomerInforPageUI.YEAR_DROPDOWN, year);
+	}
+
+	public void inputToEmailTextbox(String email) {
+		waitToElementVisible(driver, UserCustomerInforPageUI.EMAIL_TEXTBOX);
+		sendKeyToElement(driver, UserCustomerInforPageUI.EMAIL_TEXTBOX, email);
+	}
+
+	public void clickToSaveButton() {
+		waitToElementClickable(driver, UserCustomerInforPageUI.SAVE_BUTTON);
+		clickToElement(driver, UserCustomerInforPageUI.SAVE_BUTTON);
+
+	}
+
+	public void inputToCompanyTextbox(String companyName) {
+		waitToElementVisible(driver, UserCustomerInforPageUI.COMPANY_TEXTBOX);
+		sendKeyToElement(driver, UserCustomerInforPageUI.COMPANY_TEXTBOX, companyName);
+	}
+
+	public boolean isGenderFamaleRadioButtonSelected() {
+		waitToElementVisible(driver, UserCustomerInforPageUI.GENDER_FAMALE_RADIO);
+		return isElementSelected(driver, UserCustomerInforPageUI.GENDER_FAMALE_RADIO);
+	}
 
 }

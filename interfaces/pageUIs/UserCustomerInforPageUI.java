@@ -15,4 +15,10 @@ public class UserCustomerInforPageUI {
 	public static final String COMPANY_TEXTBOX = "//input[@id='Company']";
 	public static final String NEWSLETTER_TEXTBOX = "//input[@id='Newsletter']";
 
+	public static final String GENDER_FAMALE_RADIO = "//input[@id='gender-female']";
+	
+	public static final String SAVE_BUTTON = "//button[@id='save-info-button']";
+
+	
+
 }

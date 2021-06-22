@@ -15,8 +15,9 @@
 		<parameter name="url" value="https://demo.nopcommerce.com/" />
 		<classes>
 			<class name="com.nopcommerce.users.Common_01_RegisterToSystem" />
-			<class name="com.nopcommerce.users.User_01_Register" />
-			<class name="com.nopcommerce.users.User_02_Login" />
+			<!--<class name="com.nopcommerce.users.User_01_Register" />
+			<class name="com.nopcommerce.users.User_02_Login" />-->
+			<class name="com.nopcommerce.users.User_03_My_Account" />
 
 		</classes>
 	</test> <!-- Test -->
