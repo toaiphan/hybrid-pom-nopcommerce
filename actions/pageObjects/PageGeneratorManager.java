@@ -29,7 +29,7 @@ public class PageGeneratorManager {
 		return new UserAddressPO(driver);
 
 	}
-	
+
 	public static UserChangePasswordPO getUserChangePasswordPage(WebDriver driver) {
 		return new UserChangePasswordPO(driver);
 
@@ -54,6 +54,7 @@ public class PageGeneratorManager {
 		// TODO Auto-generated method stub
 		return new AdminDashboardPO(driver);
 	}
+
 	public static AdminProductPO getAdminProductPage(WebDriver driver) {
 		// TODO Auto-generated method stub
 		return new AdminProductPO(driver);
@@ -63,8 +64,14 @@ public class PageGeneratorManager {
 		// TODO Auto-generated method stub
 		return new UserDetailProductPagePO(driver);
 	}
+
 	public static UserProductReviewPO getUserProductReviewPage(WebDriver driver) {
 		// TODO Auto-generated method stub
 		return new UserProductReviewPO(driver);
+	}
+
+	public static UserSearchPagePO getUserSearchPage(WebDriver driver) {
+		// TODO Auto-generated method stub
+		return new UserSearchPagePO(driver);
 	}
 }

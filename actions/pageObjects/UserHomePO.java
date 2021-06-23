@@ -70,4 +70,10 @@ public class UserHomePO extends AbstractPage {
 
 	}
 
+	public UserSearchPagePO clickToLinkInFooterbyName(String linkNameInFooter) {
+		waitToElementClickable(driver, UserHomePageUI.DYNAMIC_IN_FOOTER_LINK, linkNameInFooter);
+		clickToElement(driver, UserHomePageUI.DYNAMIC_IN_FOOTER_LINK, linkNameInFooter);
+		return PageGeneratorManager.getUserSearchPage(driver);
+	}
+
 }
