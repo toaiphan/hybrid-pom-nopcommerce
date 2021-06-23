@@ -59,4 +59,12 @@ public class PageGeneratorManager {
 		return new AdminProductPO(driver);
 	}
 
+	public static UserDetailProductPagePO getUserDetailProductPage(WebDriver driver) {
+		// TODO Auto-generated method stub
+		return new UserDetailProductPagePO(driver);
+	}
+	public static UserProductReviewPO getUserProductReviewPage(WebDriver driver) {
+		// TODO Auto-generated method stub
+		return new UserProductReviewPO(driver);
+	}
 }

@@ -5,10 +5,12 @@ import pageObjects.PageGeneratorManager;
 import pageObjects.UserAddressPO;
 import pageObjects.UserChangePasswordPO;
 import pageObjects.UserCustomerInforPO;
+import pageObjects.UserDetailProductPagePO;
 import pageObjects.UserHomePO;
 import pageObjects.UserLoginPO;
 import pageObjects.UserMyProductReviewPO;
 import pageObjects.UserOdersPagePO;
+import pageObjects.UserProductReviewPO;
 import pageObjects.UserRegisterPO;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -27,9 +29,11 @@ public class User_03_My_Account extends AbstractTest {
 	UserMyProductReviewPO myProductReviewPage;
 	UserOdersPagePO odersPagePage;
 	UserChangePasswordPO changePasswordPage;
+	UserDetailProductPagePO detailProductPage;
+	UserProductReviewPO productReviewPage;
 	Select select;
 	String firstName, lastName, day, month, year, companyName, email, password, invalidEmail, notMatchPassword, country,
-			state, city, address1, address2, zip, phone, fax, newPassword;
+			state, city, address1, address2, zip, phone, fax, newPassword,reviewText,reviewTitle;
 
 	@Parameters(value = { "browser", "url" })
 	@BeforeClass
@@ -53,6 +57,8 @@ public class User_03_My_Account extends AbstractTest {
 		zip = "550000";
 		phone = "123456789";
 		fax = "987654321";
+		reviewText = "very good";
+		reviewTitle = "My review";
 
 		log.info("Pre-condition - Step 01: Open Home Page");
 		homePage = PageGeneratorManager.getUserHomePage(driver);
@@ -254,6 +260,43 @@ public class User_03_My_Account extends AbstractTest {
 
 		log.info("TC_03_Change_Password - Step 16: Verify Login Susscess");
 		verifyTrue(homePage.isMyAccountLinkDisplayed());
+
+	}
+
+	@Test
+	public void TC_04_My_Product_Review() {
+
+		log.info("TC_04_My_Product_Review - Step 01: Click To 1 Product ");
+		detailProductPage = homePage.clickToDetailProductByName("Build your own computer");
+
+		log.info("TC_04_My_Product_Review - Step 02: Click Add Your Review");
+		productReviewPage = detailProductPage.clickToAddYourReview();
+
+		log.info("TC_04_My_Product_Review - Step 03: Input Review Title ");
+		productReviewPage.InputToReviewTitleTextbox(reviewTitle);
+
+		log.info("TC_04_My_Product_Review - Step 04: Input Review Text");
+		productReviewPage.InputToReviewTextArea(reviewText);
+
+		log.info("TC_04_My_Product_Review - Step 05:Rating");
+		productReviewPage.RatingByNumber("3");
+
+		log.info("TC_04_My_Product_Review - Step 06: Submit Review");
+
+		productReviewPage.ClickToSubmitReviewButton();
+
+		log.info("TC_04_My_Product_Review - Step 07: Click To My Account");
+		customerInfoPage = productReviewPage.ClickToMyAccountLink();
+
+		log.info("TC_04_My_Product_Review - Step 08: Click To My Products Review");
+		customerInfoPage.openLinkWithPageName(driver, "My product reviews");
+		myProductReviewPage = PageGeneratorManager.getUserMyProductReviewPage(driver);
+
+		log.info("TC_04_My_Product_Review - Step 09: Verify Review Title");
+		verifyEquals(myProductReviewPage.getReviewTitleText(), reviewTitle);
+		verifyEquals(myProductReviewPage.getReviewText(), reviewText);
+//	verifyEquals(myProductReviewPage.getRating(), "");
+		verifyEquals(myProductReviewPage.getProductNameText(), "Build your own computer");
 
 	}
 

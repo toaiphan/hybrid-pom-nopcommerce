@@ -3,6 +3,7 @@ package pageObjects;
 import org.openqa.selenium.WebDriver;
 
 import commons.AbstractPage;
+import pageUIs.AdminProductPageUI;
 import pageUIs.UserHomePageUI;
 
 public class UserHomePO extends AbstractPage {
@@ -60,6 +61,13 @@ public class UserHomePO extends AbstractPage {
 	public boolean isRegisterLinkUndisplayed() {
 		waitToElementInvisible(driver, UserHomePageUI.REGISTER_LINK);
 		return isElementUndisplayed(driver, UserHomePageUI.REGISTER_LINK);
+	}
+
+	public UserDetailProductPagePO clickToDetailProductByName(String productName) {
+		waitToElementClickable(driver, UserHomePageUI.PRODUCT_LINK, productName);
+		clickToElement(driver, UserHomePageUI.PRODUCT_LINK, productName);
+		return PageGeneratorManager.getUserDetailProductPage(driver);
+
 	}
 
 }
