@@ -34,14 +34,16 @@ public class User_04_Search extends AbstractTest {
 	UserDetailProductPagePO detailProductPage;
 	UserProductReviewPO productReviewPage;
 	UserSearchPagePO searchPage;
-
 	Select select;
-	
+	String dataNotExist, relativeProduct;
+
 	@Parameters(value = { "browser", "url" })
 	@BeforeClass
 	public void beforeClass(String browserName, String url) {
 		driver = getBrowserDriver(browserName, url);
-	
+
+		dataNotExist = "Macbook Pro 2050";
+		relativeProduct = "Lenovo";
 
 		log.info("Pre-condition - Step 01: Open Home Page");
 		homePage = PageGeneratorManager.getUserHomePage(driver);
@@ -55,7 +57,7 @@ public class User_04_Search extends AbstractTest {
 
 		log.info("Pre-condition - Step 04: Click To Login Button");
 		homePage = loginPage.clickToLoginButton();
-		
+
 		log.info("Pre-condition - Step 05: Click To Search Link In Footer");
 		searchPage = homePage.clickToLinkInFooterbyName("Search");
 	}
@@ -64,6 +66,39 @@ public class User_04_Search extends AbstractTest {
 	public void TC_01_Search_With_Empty_Data() {
 		log.info("TC_01_Search_With_Empty_Data - Step 01: Click To Search Button ");
 		searchPage.clickToSearchButton();
+
+		log.info("TC_01_Search_With_Empty_Data - Step 02: Verify Error ");
+		verifyEquals(searchPage.getEmptyErrorMessageText(), "Search term minimum length is 3 characters");
+
+	}
+
+	@Test
+	public void TC_02_Search_With_Data_Not_Exist() {
+
+		log.info("TC_02_Search_With_Data_Not_Exist - Step 01: Input Data Not Exist ");
+		searchPage.inputToSearchTextbox(dataNotExist);
+
+		log.info("TC_02_Search_With_Data_Not_Exist - Step 02: Click To Search Button ");
+		searchPage.clickToSearchButton();
+
+		log.info("TC_02_Search_With_Data_Not_Exist - Step 03: Verify Error ");
+		verifyEquals(searchPage.getNoResultMessageText(), "No products were found that matched your criteria.");
+
+	}
+
+	@Test
+	public void TC_03_Relative_Search_Product() {
+
+		log.info("TC_03_Relative_Search_Product - Step 01: Input Relative Product ");
+		searchPage.inputToSearchTextbox(relativeProduct);
+
+		log.info("TC_03_Relative_Search_Product - Step 02: Click To Search Button ");
+		searchPage.clickToSearchButton();
+
+		log.info("TC_03_Relative_Search_Product - Step 03: Verify 2 Products Appear ");
+		verifyTrue(searchPage.areProductsDisplayed( "Lenovo IdeaCentre 600 All-in-One PC",
+				"Lenovo Thinkpad X1 Carbon Laptop"));
+
 	}
 
 	@AfterClass(alwaysRun = true)
