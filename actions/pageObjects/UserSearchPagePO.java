@@ -1,6 +1,7 @@
 package pageObjects;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -11,6 +12,7 @@ import org.testng.Assert;
 
 import commons.AbstractPage;
 import pageUIs.AdminProductPageUI;
+import pageUIs.UserRegisterPageUI;
 import pageUIs.UserSearchPageUI;
 
 public class UserSearchPagePO extends AbstractPage {
@@ -54,11 +56,56 @@ public class UserSearchPagePO extends AbstractPage {
 		expectedProducts.add(producName2);
 		System.out.println(actualItems);
 		System.out.println(expectedProducts);
-		if (expectedProducts == actualItems) {
+		if (actualItems.equals(expectedProducts)) {
+			System.out.println("if");
+			return true;
+		
+
+		} else {
+			System.out.println("else");
+			return false;
+		}
+	}
+
+	public boolean isProductsDisplayed(String productName1) {
+		List<WebElement> products = getElements(driver, UserSearchPageUI.LIST_ITEM_RESULT_LINK);
+		ArrayList<String> actualItems = new ArrayList<String>();
+		for (WebElement option : products) {
+			actualItems.add(option.getText());
+		}
+		ArrayList<String> expectedProducts = new ArrayList<String>();
+		// add cac item vao mang
+		expectedProducts.add(productName1);
+		System.out.println(actualItems);
+		System.out.println(expectedProducts);
+		if (actualItems.equals(expectedProducts)) {
+			System.out.println("if");
 			return true;
 
 		} else {
+			System.out.println("else");
 			return false;
 		}
+	}
+
+	public void checkToAdvancedSearchCheckBox() {
+		waitToElementClickable(driver, UserSearchPageUI.ADVANCED_SEARCH_CHECKBOX);
+		checkToCheckBox(driver, UserSearchPageUI.ADVANCED_SEARCH_CHECKBOX);
+	}
+
+	public void selectCategoryDropdown(String category) {
+		waitToElementClickable(driver, UserSearchPageUI.CATEGORY_DROPDOWN);
+		selectItemInDropdown(driver, UserSearchPageUI.CATEGORY_DROPDOWN, category);
+	}
+
+	public void checkToSearchSubCategoriesCheckbox() {
+		waitToElementClickable(driver, UserSearchPageUI.AUTO_SEARCH_SUB_CATEGORY_CHECKBOX);
+		checkToCheckBox(driver, UserSearchPageUI.AUTO_SEARCH_SUB_CATEGORY_CHECKBOX);
+		
+	}
+
+	public void selectManufacturerDropdown(String hpManufacturer) {
+		waitToElementClickable(driver, UserSearchPageUI.MANUFACTURER_DROPDOWN);
+		selectItemInDropdown(driver, UserSearchPageUI.MANUFACTURER_DROPDOWN, hpManufacturer);		
 	}
 }
