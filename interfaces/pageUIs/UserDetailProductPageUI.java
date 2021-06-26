@@ -9,6 +9,9 @@ public class UserDetailProductPageUI {
 	// REGISTER_LINK : cu phap cua hang so trong java
 
 	public static final String ADD_REVIEW_BUTTON = "//a[contains(text(),'Add your review')]";
-
+	public static final String ADD_TO_WISTLIST_BUTTON = "//div[@class='add-to-wishlist']//button[text()='Add to wishlist']";
+	public static final String ADDED_SUCCESS_MESSAGE = "//p[@class='content']";
+	public static final String CLOSE_ADDED_SUCCESS_MESSAGE_BUTTON = "//span[@class='close']";
+	public static final String WIST_LIST_LINK = "//span[@class='wishlist-label']";
 
 }

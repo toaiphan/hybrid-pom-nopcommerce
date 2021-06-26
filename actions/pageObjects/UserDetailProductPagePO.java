@@ -20,4 +20,26 @@ public class UserDetailProductPagePO extends AbstractPage {
 		return PageGeneratorManager.getUserProductReviewPage(driver);
 	}
 
+	public void clickToAddToWistListButton() {
+		waitToElementClickable(driver, UserDetailProductPageUI.ADD_TO_WISTLIST_BUTTON);
+		clickToElement(driver, UserDetailProductPageUI.ADD_TO_WISTLIST_BUTTON);
+	}
+
+	public String getAddedSuccessMessage() {
+		waitToElementVisible(driver, UserDetailProductPageUI.ADDED_SUCCESS_MESSAGE);
+		return getElementText(driver, UserDetailProductPageUI.ADDED_SUCCESS_MESSAGE);
+	}
+
+	public void clickToCloseMessageButton() {
+		waitToElementClickable(driver, UserDetailProductPageUI.CLOSE_ADDED_SUCCESS_MESSAGE_BUTTON);
+		clickToElement(driver, UserDetailProductPageUI.CLOSE_ADDED_SUCCESS_MESSAGE_BUTTON);		
+		sleepInSecond(2);
+	}
+
+	public UserWistListPagePO clickToWistList() {
+		waitToElementClickable(driver, UserDetailProductPageUI.WIST_LIST_LINK);
+		clickToElement(driver, UserDetailProductPageUI.WIST_LIST_LINK);		
+		return PageGeneratorManager.getUserWistListPage(driver);
+	}
+
 }
