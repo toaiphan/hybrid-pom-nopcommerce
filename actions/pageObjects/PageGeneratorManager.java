@@ -74,10 +74,21 @@ public class PageGeneratorManager {
 		// TODO Auto-generated method stub
 		return new UserSearchPagePO(driver);
 	}
+
 	public static UserWistListPagePO getUserWistListPage(WebDriver driver) {
 		return new UserWistListPagePO(driver);
 	}
+
 	public static UserCartPagePO getUserCartPage(WebDriver driver) {
 		return new UserCartPagePO(driver);
+	}
+
+	public static UserCompareProductListPagePO getUserCompareProductListPage(WebDriver driver) {
+		return new UserCompareProductListPagePO(driver);
+	}
+	
+	
+	public static UserRecentlyViewedProductPagePO getUserRecentlyViewedProductPage(WebDriver driver) {
+		return new UserRecentlyViewedProductPagePO(driver);
 	}
 }

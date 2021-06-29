@@ -13,6 +13,7 @@ public class UserHomePageUI {
 	public static final String LOGOUT_LINK = "//a[@class='ico-logout']";
 	public static final String PRODUCT_LINK = "	//a[contains(text(),'%s')]";
 	public static final String DYNAMIC_IN_FOOTER_LINK = "//a[contains(text(),'%s')]";
-
+	public static final String ADD_TO_COMPARE_LIST_LINK_BY_DYNAMIC_NAME ="//a[contains(text(),'%s')]/parent::h2//following-sibling::div[@class='add-info']/div[@class='buttons']/button[@title='Add to compare list']";
+public static final String ADDED_PRODUCT_COMPARISON_MESSAGE ="//p[@class='content']";
 
 }

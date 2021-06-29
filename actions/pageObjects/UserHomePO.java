@@ -11,14 +11,14 @@ public class UserHomePO extends AbstractPage {
 
 // ham khoi tao ( contructor), khi new class nay len thi no se chay dau tien
 	// cung ten voi ten class
-	
-	
-	//1 class co the co nhieu contructer ( khac nhau tham so truyen vao , ) truong hop String bike va String moto vẫn là trùng nhau,
+
+	// 1 class co the co nhieu contructer ( khac nhau tham so truyen vao , ) truong
+	// hop String bike va String moto vẫn là trùng nhau,
 	// cần khác kiểu dữ liệu hoặc số lượng tham số ( nếu cùng kiểu dữ liệu)
 	// gan driver toan cuc cho cuc bo
 // matching driver cho nhieu class
 	// chi can new 1 lan driver , nhung class khac gan lai
-	
+
 	public UserHomePO(WebDriver driver) {
 
 		this.driver = driver;
@@ -34,7 +34,6 @@ public class UserHomePO extends AbstractPage {
 		waitToElementClickable(driver, UserHomePageUI.LOGIN_LINK);
 		clickToElement(driver, UserHomePageUI.LOGIN_LINK);
 		return PageGeneratorManager.getUserLoginPage(driver);
-
 
 	}
 
@@ -55,7 +54,6 @@ public class UserHomePO extends AbstractPage {
 		clickToElement(driver, UserHomePageUI.MY_ACCOUNT_LINK);
 		return PageGeneratorManager.getUserCustomerInfoPage(driver);
 
-		
 	}
 
 	public boolean isRegisterLinkUndisplayed() {
@@ -75,5 +73,21 @@ public class UserHomePO extends AbstractPage {
 		clickToElement(driver, UserHomePageUI.DYNAMIC_IN_FOOTER_LINK, linkNameInFooter);
 		return PageGeneratorManager.getUserSearchPage(driver);
 	}
+
+	public void clickAddToCompareListByName(String productName) {
+		waitToElementClickable(driver, UserHomePageUI.ADD_TO_COMPARE_LIST_LINK_BY_DYNAMIC_NAME, productName);
+		clickToElement(driver, UserHomePageUI.ADD_TO_COMPARE_LIST_LINK_BY_DYNAMIC_NAME, productName);
+
+	}
+
+	public String getAddedToCompareSusscessMessage() {
+		// TODO Auto-generated method stub
+		sleepInSecond(1);
+		waitToElementVisible(driver, UserHomePageUI.ADDED_PRODUCT_COMPARISON_MESSAGE);
+		return getElementText(driver, UserHomePageUI.ADDED_PRODUCT_COMPARISON_MESSAGE);
+
+	}
+
+	
 
 }

@@ -3,6 +3,7 @@ package pageObjects;
 import org.openqa.selenium.WebDriver;
 
 import commons.AbstractPage;
+import pageUIs.UserCompareProductListPageUI;
 import pageUIs.UserDetailProductPageUI;
 import pageUIs.UserHomePageUI;
 import pageUIs.UserProductReviewPageUI;
@@ -40,6 +41,12 @@ public class UserDetailProductPagePO extends AbstractPage {
 		waitToElementClickable(driver, UserDetailProductPageUI.WIST_LIST_LINK);
 		clickToElement(driver, UserDetailProductPageUI.WIST_LIST_LINK);		
 		return PageGeneratorManager.getUserWistListPage(driver);
+	}
+
+	public UserHomePO clickToHomePage() {
+		waitToElementClickable(driver, UserDetailProductPageUI.HOME_PAGE_LINK);
+		clickToElement(driver, UserDetailProductPageUI.HOME_PAGE_LINK);
+		return PageGeneratorManager.getUserHomePage(driver);
 	}
 
 }

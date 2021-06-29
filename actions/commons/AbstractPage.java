@@ -27,7 +27,9 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import pageObjects.PageGeneratorManager;
+import pageObjects.UserSearchPagePO;
 import pageUIs.AbstractPageUI;
+import pageUIs.UserHomePageUI;
 
 //trong nay se viet tat cac cac ham common, de su dung lai
 public class AbstractPage {
@@ -583,6 +585,12 @@ public class AbstractPage {
 		clickToElement(driver, AbstractPageUI.DYNAMIC_LINK, pageName);
 
 	}
+	public void clickToLinkInFooterbyName(WebDriver driver,String linkNameInFooter) {
+		waitToElementClickable(driver, AbstractPageUI.DYNAMIC_IN_FOOTER_LINK, linkNameInFooter);
+		clickToElement(driver, AbstractPageUI.DYNAMIC_IN_FOOTER_LINK, linkNameInFooter);
+
+	}
+	
 
 	public void waitAjaxLoadingInvisible(WebDriver driver) {
 		waitToElementInvisible(driver, AbstractPageUI.LOADING_ICON);

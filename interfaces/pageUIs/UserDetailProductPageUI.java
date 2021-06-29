@@ -13,5 +13,7 @@ public class UserDetailProductPageUI {
 	public static final String ADDED_SUCCESS_MESSAGE = "//p[@class='content']";
 	public static final String CLOSE_ADDED_SUCCESS_MESSAGE_BUTTON = "//span[@class='close']";
 	public static final String WIST_LIST_LINK = "//span[@class='wishlist-label']";
+	public static final String HOME_PAGE_LINK = "//img[@alt='nopCommerce demo store']";
+
 
 }
