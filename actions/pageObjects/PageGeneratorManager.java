@@ -91,4 +91,8 @@ public class PageGeneratorManager {
 	public static UserRecentlyViewedProductPagePO getUserRecentlyViewedProductPage(WebDriver driver) {
 		return new UserRecentlyViewedProductPagePO(driver);
 	}
+
+	public static UserCheckOutPO getUserCheckOutPage(WebDriver driver) {
+		return new UserCheckOutPO(driver);
+	}
 }

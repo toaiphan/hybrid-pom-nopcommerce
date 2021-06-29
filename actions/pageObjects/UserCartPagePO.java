@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import commons.AbstractPage;
 import pageUIs.AdminProductPageUI;
 import pageUIs.UserCartPageUI;
+import pageUIs.UserDetailProductPageUI;
 import pageUIs.UserWistListPageUI;
 
 public class UserCartPagePO extends AbstractPage {
@@ -49,6 +50,34 @@ public class UserCartPagePO extends AbstractPage {
 	public String getCartEmptyMessage() {
 		waitToElementVisible(driver, UserCartPageUI.NO_DATA_MESSAGE);
 		return getElementText(driver, UserCartPageUI.NO_DATA_MESSAGE);
+	}
+
+	public UserHomePO clickToHomePageLink() {
+		waitToElementClickable(driver, UserCartPageUI.HOMEPAGE_LINK);
+		clickToElement(driver, UserCartPageUI.HOMEPAGE_LINK);
+		return PageGeneratorManager.getUserHomePage(driver);
+	}
+
+	public void inputToProductQuantity(String quantity) {
+		waitToElementVisible(driver, UserCartPageUI.PRODUCT_QUANTITY_TEXTBOX);
+		sendKeyToElement(driver, UserCartPageUI.PRODUCT_QUANTITY_TEXTBOX, quantity);
+		
+	}
+
+	public void clickToUpdateCart() {
+		waitToElementClickable(driver, UserCartPageUI.UPDATE_BUTTON);
+		clickToElement(driver, UserCartPageUI.UPDATE_BUTTON);		
+	}
+
+	public void clickToAgreeTermCheckbox() {
+		waitToElementClickable(driver, UserCartPageUI.AGREE_TERM_CHECKBOX);
+		clickToElement(driver, UserCartPageUI.AGREE_TERM_CHECKBOX);			
+	}
+
+	public UserCheckOutPO clickToCheckOutButton() {
+		waitToElementClickable(driver, UserCartPageUI.CHECK_OUT_BUTTON);
+		clickToElement(driver, UserCartPageUI.CHECK_OUT_BUTTON);	
+		return PageGeneratorManager.getUserCheckOutPage(driver);
 	}
 
 }

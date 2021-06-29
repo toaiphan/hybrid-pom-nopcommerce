@@ -5,6 +5,7 @@ import pageObjects.PageGeneratorManager;
 import pageObjects.UserAddressPO;
 import pageObjects.UserCartPagePO;
 import pageObjects.UserChangePasswordPO;
+import pageObjects.UserCheckOutPO;
 import pageObjects.UserCompareProductListPagePO;
 import pageObjects.UserCustomerInforPO;
 import pageObjects.UserDetailProductPagePO;
@@ -41,6 +42,7 @@ public class User_07_Order extends AbstractTest {
 	UserCartPagePO cartPage;
 	UserCompareProductListPagePO compageProductListPage;
 	UserRecentlyViewedProductPagePO recentlyViewedProductPage;
+	UserCheckOutPO checkOutPage;
 
 	@Parameters(value = { "browser", "url" })
 	@BeforeClass
@@ -155,6 +157,71 @@ public class User_07_Order extends AbstractTest {
 
 		log.info("TC_03_Remove_Product_From_Cart - Step 02: Verify Empty Message ");
 		verifyEquals(cartPage.getCartEmptyMessage(), "Your Shopping Cart is empty!");
+
+	}
+
+	@Test
+	public void TC_04_Update_Cart() {
+
+		log.info("TC_04_Update_Cart - Step 01: Click To Home Page ");
+		homePage = cartPage.clickToHomePageLink();
+
+		log.info("TC_04_Update_Cart - Step 02: Click To Detail A Product ");
+		detailProductPage = homePage.clickToDetailProductByName("HTC One M8 Android L 5.0 Lollipop");
+
+		log.info("TC_04_Update_Cart - Step 03: Add To Cart ");
+		detailProductPage.clickToAddToCartButton();
+
+		log.info("TC_04_Update_Cart - Step 04: Verify added Susscess Message ");
+		verifyEquals(detailProductPage.getAddedSusscessMessage(), "The product has been added to your shopping cart");
+
+		log.info("TC_04_Update_Cart - Step 05: Click Close Message ");
+		detailProductPage.clickToCloseMessageButton();
+
+		log.info("TC_04_Update_Cart - Step 06: Click To Cart ");
+		cartPage = detailProductPage.clickToCartLink();
+
+		log.info("TC_04_Update_Cart - Step 07: Update Quantity ");
+		cartPage.inputToProductQuantity("5");
+
+		log.info("TC_04_Update_Cart - Step 08: Click To Update Cart ");
+		cartPage.clickToUpdateCart();
+
+		log.info("TC_04_Update_Cart - Step 09: Verify Cart ");
+		verifyTrue(
+				cartPage.areProductDetailDisplayed("HTC One M8 Android L 5.0 Lollipop", "$245.00", "5", "$1,225.00"));
+	}
+
+	@Test
+	public void TC_05_Check_Out_By_CheQue() {
+
+		log.info("TC_05_Check_Out_By_CheQue - Step 01: Click To Agree ");
+		cartPage.clickToAgreeTermCheckbox();
+
+		log.info("TC_05_Check_Out_By_CheQue - Step 02: Click To Check Out ");
+		checkOutPage = cartPage.clickToCheckOutButton();
+
+		log.info("TC_05_Check_Out_By_CheQue - Step 03: Uncheck Ship to the same address ");
+		checkOutPage.unCheckShipToSameAddress();
+
+		log.info("TC_05_Check_Out_By_CheQue - Step 04: Select Country ");
+		checkOutPage.selectCountryDropdown("United States");
+
+		log.info("TC_05_Check_Out_By_CheQue - Step 05: Select State ");
+		checkOutPage.selectStateDropdown("Alabama");
+
+		log.info("TC_05_Check_Out_By_CheQue - Step 06: Input City ");
+		checkOutPage.inputToCityTextbox("Ha Noi");
+
+		log.info("TC_05_Check_Out_By_CheQue - Step 07: Input Address1 ");
+		checkOutPage.inputToAddress1Textbox("Dinh Thon");
+		
+		log.info("TC_05_Check_Out_By_CheQue - Step 08: Input Zip ");
+		checkOutPage.inputToZipTextbox("550000");
+
+		log.info("TC_05_Check_Out_By_CheQue - Step 09: Input Phone Number ");
+		checkOutPage.inputToPhoneNumberTextbox("123456789");
+
 
 	}
 
