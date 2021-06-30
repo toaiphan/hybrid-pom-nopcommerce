@@ -16,7 +16,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
-public class Level_03_Upload_File extends AbstractTest {
+public class Admin_02_Upload_File extends AbstractTest {
 
 	WebDriver driver;
 	String fileName = "hanoi.jpg";

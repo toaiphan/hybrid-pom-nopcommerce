@@ -221,8 +221,64 @@ public class User_07_Order extends AbstractTest {
 
 		log.info("TC_05_Check_Out_By_CheQue - Step 09: Input Phone Number ");
 		checkOutPage.inputToPhoneNumberTextbox("123456789");
+		
+		log.info("TC_05_Check_Out_By_CheQue - Step 10: Click Continue ");
+		checkOutPage.clickToBillingContinueButton();
+		
+		log.info("TC_05_Check_Out_By_CheQue - Step 11: Select Address ");
+		checkOutPage.selectAddressDropdown("New Address");
+		
+		log.info("TC_05_Check_Out_By_CheQue - Step 12: Select Country ");
+		checkOutPage.selectCountryDropdown("United States");
 
+		log.info("TC_05_Check_Out_By_CheQue - Step 13: Select State ");
+		checkOutPage.selectStateDropdown("Alaska");
 
+		log.info("TC_05_Check_Out_By_CheQue - Step 14: Input City ");
+		checkOutPage.inputToCityTextbox("Ho Chi Minh");
+
+		log.info("TC_05_Check_Out_By_CheQue - Step 15: Input Address1 ");
+		checkOutPage.inputToAddress1Textbox("Tan Binh");
+		
+		log.info("TC_05_Check_Out_By_CheQue - Step 16: Input Zip ");
+		checkOutPage.inputToZipTextbox("550111");
+
+		log.info("TC_05_Check_Out_By_CheQue - Step 17: Input Phone Number ");
+		checkOutPage.inputToPhoneNumberTextbox("987654321");
+		
+		log.info("TC_05_Check_Out_By_CheQue - Step 18: Click Continue ");
+		checkOutPage.clickToAddressContinueButton();
+		
+		log.info("TC_05_Check_Out_By_CheQue - Step 19: Click Continue ");
+		checkOutPage.clickToShipingContinueButton();
+		
+		log.info("TC_05_Check_Out_By_CheQue - Step 20: Click Continue ");
+		checkOutPage.clickToPaymentContinueButton();
+		
+		log.info("TC_05_Check_Out_By_CheQue - Step 21: Verify Payment Information ");
+		verifyEquals(checkOutPage.getPaymentInformationText(), "Mail Personal or Business Check, Cashier's Check or money order to:");
+		
+		log.info("TC_05_Check_Out_By_CheQue - Step 22: Click Continue ");
+		checkOutPage.clickToConfirmContinueButton();
+		
+		log.info("TC_05_Check_Out_By_CheQue - Step 23: Verify Confirm Information ");
+		verifyEquals(checkOutPage.getBillingEmailText(), "Email: " + Common_01_RegisterToSystem.USERNAME);
+		verifyEquals(checkOutPage.getShippingPhoneText(),  "Phone: 987654321");
+		verifyEquals(checkOutPage.getPaymentMethodText(),  "Check / Money Order");
+		verifyEquals(checkOutPage.getShippingMethodText(),  "Ground");
+		
+		verifyTrue(
+				checkOutPage.areProductDetailDisplayed("HTC One M8 Android L 5.0 Lollipop", "$245.00", "5", "$1,225.00"));
+		verifyEquals(checkOutPage.getShippingTotalText(),  "$1,225.00");
+
+		log.info("TC_05_Check_Out_By_CheQue - Step 24: Click Confirm ");
+		checkOutPage.clickToConfirmButton();
+		
+		log.info("TC_05_Check_Out_By_CheQue - Step 25: Verify Success Message ");
+		verifyEquals(checkOutPage.getSuccessMessage(), "Your order has been successfully processed!");
+		
+		log.info("TC_05_Check_Out_By_CheQue - Step 26: Verify Order Number Displayed ");
+		verifyTrue(checkOutPage.isOrderNumberDisplayed());
 	}
 
 	@AfterClass(alwaysRun = true)

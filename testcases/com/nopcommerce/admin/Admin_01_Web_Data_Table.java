@@ -16,7 +16,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
-public class Level_02_Web_Data_Table extends AbstractTest {
+public class Admin_01_Web_Data_Table extends AbstractTest {
 
 	WebDriver driver;
 
