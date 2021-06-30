@@ -9,6 +9,8 @@ import pageObjects.UserLoginPO;
 import pageObjects.UserMyProductReviewPO;
 import pageObjects.UserOdersPagePO;
 import pageObjects.UserRegisterPO;
+import utilities.FakerConfig;
+
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
@@ -30,17 +32,19 @@ public class Common_01_RegisterToSystem extends AbstractTest {
 	Select select;
 	String firstname, lastname, email, companyName, password, invalidEmail, day, month, year, existEmail,
 			invalidPassword, notMatchPassword;
+	FakerConfig faker;
 
 	@Parameters(value = { "browser", "url" })
 	@BeforeTest
 	public void beforeClass(String browserName, String url) {
 		driver = getBrowserDriver(browserName, url);
-		firstname = "phan";
-		lastname = "toai";
-		email = "toaiphan" + getRandomNumber() + "@gmail.com";
+		faker = FakerConfig.getData();
+		firstname = faker.getFirstName();
+		lastname = faker.getLastName();
+		email = faker.getEmail();
 
-		companyName = "company";
-		password = "123456";
+		companyName = faker.getCompanyName();
+		password = faker.getPassword();
 		invalidEmail = "toaiphan" + getRandomNumber();
 		day = "8";
 		month = "June";
