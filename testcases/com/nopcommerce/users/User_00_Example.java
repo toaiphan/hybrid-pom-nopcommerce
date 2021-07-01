@@ -39,7 +39,7 @@ public class User_00_Example extends AbstractTest {
 		companyName = "company";
 		password = "123456";
 	}
-
+@Test
 	public void TC_01_Register() {
 		log.info("Register - Step 01: Open Home Page");
 		homePage = PageGeneratorManager.getUserHomePage(driver);
@@ -66,7 +66,7 @@ public class User_00_Example extends AbstractTest {
 		homePage = registerPage.clickToLogoutLink();
 
 	}
-
+@Test(dependsOnMethods = "TC_01_Register")
 	public void TC_02_Login() {
 		loginPage = homePage.clickToLoginLink();
 		loginPage.inputToEmailTextbox(email);
@@ -86,7 +86,7 @@ public class User_00_Example extends AbstractTest {
 		verifyTrue(homePage.isRegisterLinkUndisplayed());
 
 	}
-
+@Test(dependsOnMethods = {"TC_01_Register","TC_02_Login"})
 	public void TC_03_View_My_Account() {
 		customerInfoPage = homePage.clickToMyAccountLink();
 		Assert.assertTrue(customerInfoPage.isGenderMaleRadioButtonSelected());
